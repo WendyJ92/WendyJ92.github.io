@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wendi Ji's University of Exeter MSc coursework: Bayesian inference, classification, model evaluation and statistical reasoning.">
+  <meta name="theme-color" content="#193c34">
+  <title>Academic projects | Wendi Ji</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/academic-project.css">
+  <link rel="stylesheet" href="assets/layout.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navigation">
+    <a class="brand" href="index.html">Wendi Ji<span>Data & Operations</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#skills">Skills</a><a href="index.html#work">Experience</a><a href="dashboards.html">Dashboards</a><a href="academic.html" aria-current="page">Academic</a><a class="nav-external" href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="page-intro" aria-labelledby="page-title">
+      <a class="back-link" href="index.html">← Portfolio overview</a>
+      <p class="eyebrow">ACADEMIC PROJECTS</p><h1 id="page-title">The thinking<br>behind the analysis.</h1>
+      <p class="page-deck">Coursework from my MSc in Applied Data Science & Statistics at the University of Exeter. A space for statistical methods, model evaluation and what I learned from the results.</p>
+      <div class="page-jumps"><a href="#academic-project">Explore the project <span aria-hidden="true">↓</span></a><a href="#education">Education & recognition <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="academic-project" class="academic-section" aria-labelledby="academic-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / MSc COURSEWORK · UNIVERSITY OF EXETER</p><h2 id="academic-title">Bayesian inference<br>& classification.</h2></div><p>How can we model variation and compare predictions? In <strong>MTHM017: Advanced Topics in Statistics</strong>, I explored both questions through statistical modelling and machine learning in R.</p></div>
+      <div class="academic-grid">
+        <div class="academic-story">
+          <ul class="academic-tags" aria-label="Project tools"><li>R</li><li>JAGS / R2jags</li><li>caret</li><li>ggplot2</li></ul>
+          <article class="academic-strand"><p class="eyebrow">A / MODELLING UNCERTAINTY</p><h3>Understand variation<br>between people.</h3><p>I explored 510 reaction-time measurements from 17 participants, transformed the responses to the log scale, and fitted a hierarchical Bayesian model with participant effects and a latent delay component.</p><p>Using JAGS, I ran two MCMC chains and examined trace plots, Gelman–Rubin diagnostics and posterior summaries.</p></article>
+          <article class="academic-strand"><p class="eyebrow">B / COMPARING PREDICTIONS</p><h3>Compare models on<br>unseen observations.</h3><p>I explored a two-feature classification dataset, reserved 25% of its 1,000 observations for testing, and compared four model families: QDA, k-nearest neighbours, support vector machines and random forests.</p><p>The work combined exploratory plots, parameter tuning and evaluation using confusion matrices, accuracy and Cohen’s kappa.</p></article>
+          <p class="academic-takeaway"><strong>Skills demonstrated</strong>Data exploration · Bayesian modelling · Model comparison · Interpreting uncertainty</p>
+        </div>
+        <figure class="academic-results" aria-labelledby="academic-results-title" aria-describedby="academic-results-note">
+          <figcaption><p class="eyebrow">CLASSIFICATION / REPORTED TEST RESULTS</p><h3 id="academic-results-title">Different models.<br>The same 250 test cases.</h3></figcaption>
+          <div class="academic-result-lead"><strong>85.6<span>%</span></strong><p>Highest reported accuracy<br><b>RBF support vector machine</b><br>214 of 250 predictions correct</p></div>
+          <div class="academic-axis" aria-hidden="true"><span>Test accuracy</span><span>0–100%</span></div>
+          <ol class="academic-bars" aria-label="Test accuracy by model, highest first">
+            <li class="academic-best"><div class="academic-bar-label"><span>SVM · radial basis kernel</span><strong>85.6%</strong></div><div class="academic-bar-track" aria-hidden="true"><span style="width:85.6%"></span></div></li>
+            <li><div class="academic-bar-label"><span>Random forest · 200 trees</span><strong>84.0%</strong></div><div class="academic-bar-track" aria-hidden="true"><span style="width:84%"></span></div></li>
+            <li><div class="academic-bar-label"><span>kNN · k = 3 <small>Exploratory</small></span><strong>82.0%</strong></div><div class="academic-bar-track" aria-hidden="true"><span style="width:82%"></span></div></li>
+            <li><div class="academic-bar-label"><span>kNN · k = 5 <small>Selected by cross-validation</small></span><strong>81.2%</strong></div><div class="academic-bar-track" aria-hidden="true"><span style="width:81.2%"></span></div></li>
+            <li><div class="academic-bar-label"><span>SVM · polynomial kernel</span><strong>76.0%</strong></div><div class="academic-bar-track" aria-hidden="true"><span style="width:76%"></span></div></li>
+            <li><div class="academic-bar-label"><span>Quadratic discriminant analysis</span><strong>71.2%</strong></div><div class="academic-bar-track" aria-hidden="true"><span style="width:71.2%"></span></div></li>
+          </ol>
+          <p id="academic-results-note" class="academic-chart-note">Coursework results on the noisy-label dataset, using one 750/250 train/test split. These scores describe the reported run; they do not establish a general ranking of the models.</p>
+        </figure>
+      </div>
+      <details class="academic-method">
+        <summary>Methodology, source notes & next steps</summary>
+        <div class="academic-method-grid">
+          <div><h3>Bayesian workflow</h3><p>Each chain used 10,000 iterations, with the first 5,000 discarded as burn-in. The report includes numerical convergence diagnostics and posterior densities. Some effective sample sizes were low (λ: 180; τ: 320), so longer sampling and completed posterior predictive checks would strengthen the analysis. I present this as a modelling exercise, without clinical conclusions.</p></div>
+          <div><h3>Evaluation choices</h3><p>For kNN, repeated 10-fold cross-validation (five repeats) selected k = 5. The report also tested k = 3. The SVM and random-forest training outputs used 25 bootstrap resamples. Comparing multiple variants on one test set makes the ranking exploratory; a further independent evaluation would be needed after model selection.</p></div>
+          <div><h3>Source & interpretation</h3><p>Based on my <em>MTHM017 Advanced Topics in Statistics</em> coursework report: Bayesian methods and diagnostics on pages 27–34; classification results on pages 45–53. The chart follows the printed R outputs and confusion matrices where prose summaries differ. Models have not been rerun for this page.</p></div>
+          <div><h3>What I would develop next</h3><p>Correct the original-scale posterior summary calculations, complete the predictive checks, and evaluate the classification workflow across repeated splits. The report’s separate clean-label experiment involved retraining and is not combined with the results shown here.</p></div>
+        </div>
+      </details>
+    </section>
+    <section id="education" aria-labelledby="education-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / EDUCATION</p><h2 id="education-title">An analytical<br>foundation.</h2></div><p>Postgraduate study brought statistical depth to my experience in business data and operations.</p></div>
+      <ol class="timeline">        <li class="timeline-item timeline-education" id="exeter">
+          <div class="timeline-date"><p><time datetime="2022-09">Sep 2022</time><span class="date-separator">—</span><time datetime="2023-11">Nov 2023</time></p><span class="timeline-category">Education</span></div>
+          <article class="timeline-content"><p class="eyebrow">UNIVERSITY OF EXETER <span class="entry-location">· UNITED KINGDOM</span></p><h3>MSc Applied Data Science & Statistics</h3><p>Deepened my analytical foundation through data handling, statistical modelling, applied data science and communicating analytical findings.</p><p class="award"><span aria-hidden="true">✦</span> Dean's Commendation for Exceptional Performance</p><ul class="entry-tags" aria-label="Areas of study"><li>Statistical modelling</li><li>Data science</li><li>Communicating insight</li></ul><a class="text-link academic-timeline-link" href="#academic-project">Explore my MSc project <span aria-hidden="true">↗</span></a></article>
+        </li></ol>
+      <a class="text-link page-return" href="index.html#work">Return to my professional experience <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer><a class="footer-name" href="index.html">Wendi Ji<span>Data, people and practical progress.</span></a><p>Professional experience · Interactive demos · Academic projects</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>

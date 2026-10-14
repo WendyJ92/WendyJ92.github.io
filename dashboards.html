@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Wendi Ji's interactive project delay and operations dashboards, using synthetic data with filters and CSV downloads.">
+  <meta name="theme-color" content="#193c34">
+  <title>Interactive dashboards | Wendi Ji</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/project-dashboard.css">
+  <link rel="stylesheet" href="assets/layout.css">
+  <script src="assets/app.js" defer></script>
+  <script src="assets/project-dashboard.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navigation">
+    <a class="brand" href="index.html">Wendi Ji<span>Data & Operations</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#skills">Skills</a><a href="index.html#work">Experience</a><a href="dashboards.html" aria-current="page">Dashboards</a><a href="academic.html">Academic</a><a class="nav-external" href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="page-intro" aria-labelledby="page-title">
+      <a class="back-link" href="index.html#portfolio">← Portfolio overview</a>
+      <p class="eyebrow">INTERACTIVE DEMONSTRATIONS</p><h1 id="page-title">Explore the data.<br>Follow the decisions.</h1>
+      <p class="page-deck">Two hands-on examples of how I present delivery risks and operational performance. Both use clearly labelled synthetic data, with filters and downloadable CSV files.</p>
+      <div class="page-jumps"><a href="#project-demo">Project delivery <span aria-hidden="true">↓</span></a><a href="#demo">Operations reporting <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="project-demo" class="pm-section" aria-labelledby="pm-title">
+      <div class="pm-section-heading">
+        <div><p class="pm-eyebrow">01 / PROJECT DELIVERY</p><h2 id="pm-title">Spot the delay.<br>Plan the next step.</h2></div>
+        <p>An interactive view of project progress, planned deadlines and delivery risks. <strong>All projects, tasks and figures are fictional</strong>, created for this portfolio.</p>
+      </div>
+      <div class="pm-dashboard">
+        <div class="pm-dashboard-header">
+          <div><h3>Project delivery snapshot</h3><p>Three fictional workstreams · twelve tasks · one clear view of delivery</p></div>
+          <span class="pm-snapshot">Fixed snapshot · <time datetime="2026-09-30">30 Sep 2026</time></span>
+        </div>
+        <noscript><p class="pm-noscript">Enable JavaScript to explore this synthetic project dashboard, filter tasks and download the sample data.</p></noscript>
+        <div class="pm-controls">
+          <label for="pm-project">Project scope<select id="pm-project" aria-describedby="pm-filter-note"><option value="all">All three projects</option><option value="reporting">Reporting rollout</option><option value="crm">CRM onboarding</option><option value="stock">Stock visibility</option></select></label>
+          <label for="pm-status">Task status<select id="pm-status" aria-describedby="pm-filter-note"><option value="all">All statuses</option><option value="delayed" selected>Delayed (open)</option><option value="on-track">On track (open)</option><option value="completed">Completed</option></select></label>
+        </div>
+        <p id="pm-filter-note" class="pm-filter-note">Metrics cover the selected project scope. The status filter changes the chart, task table and CSV download only.</p>
+        <dl id="pm-metrics" class="pm-metrics" aria-label="Project scope metrics"></dl>
+        <div class="pm-chart-heading"><h4>Finish variance by task</h4><ul class="pm-chart-key" aria-label="Chart legend"><li><span class="pm-key-open" aria-hidden="true"></span>Forecast delay · open</li><li><span class="pm-key-completed" aria-hidden="true"></span>Actual delay · completed</li></ul></div>
+        <p class="pm-chart-note">Bars show calendar days beyond the planned finish. Zero means no positive delay; early or on-time finishes are labelled. Tasks are ordered by finish variance; the scale stays fixed within each project scope.</p>
+        <ul id="pm-chart" class="pm-chart" aria-label="Task finish variance"></ul>
+        <div class="pm-results-toolbar"><p id="pm-result-summary" class="pm-result-summary" role="status" aria-live="polite"></p><button id="pm-download" class="pm-download" type="button">Download shown tasks <span aria-hidden="true">↓</span></button></div>
+        <p id="pm-download-message" class="pm-download-message" role="status" aria-live="polite"></p>
+        <div id="pm-empty" class="pm-empty" hidden><strong>No tasks match this view.</strong><p>Choose another status or project to explore the schedule.</p></div>
+        <div id="pm-table-region" class="pm-table-region" role="region" aria-label="Project task details, horizontally scrollable" tabindex="0">
+          <table class="pm-table"><caption>Synthetic task register · all dates in 2026 · scroll horizontally for reasons and next steps</caption><thead><tr><th scope="col">Task / project</th><th scope="col">Owner role</th><th scope="col">Planned finish</th><th scope="col">Latest finish</th><th scope="col">Progress</th><th scope="col">Delivery status</th><th scope="col">Reason & next step</th></tr></thead><tbody id="pm-table-body"></tbody></table>
+        </div>
+        <div class="pm-method"><p><strong>How to read this:</strong> “Overdue” means an unfinished task whose planned finish is before 30 Sep 2026. “Forecast late” means its forecast exceeds the planned finish but the task is not yet overdue. The Delayed filter includes both.</p><p>Completed tasks use their actual finish, including any late completion. Forecast delay applies only to open tasks. Progress percentages are illustrative task estimates; completion is the number of finished tasks divided by all tasks in scope. All day counts are calendar days.</p></div>
+      </div>
+    </section>
+    <section id="demo" class="demo-section" aria-labelledby="demo-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / OPERATIONS REPORTING</p><h2 id="demo-title">A closer look<br>at the numbers.</h2></div><p>Explore revenue, fulfilment and customer service trends. <strong>All figures are synthetic</strong>, created for this portfolio and separate from my professional work.</p></div>
+      <div class="dashboard">
+        <div class="dashboard-top"><div><h3>Operations snapshot</h3><p>Illustrative monthly data · GBP</p></div><label for="period">Reporting period<select id="period"><option value="all">All three months</option><option value="0">April</option><option value="1">May</option><option value="2">June</option></select></label></div>
+        <noscript><p>Enable JavaScript to explore the reporting demonstration.</p></noscript>
+        <div id="metrics" class="metrics" aria-live="polite"></div><div class="chart-heading"><h4>Revenue by month</h4><button id="download" type="button">Download demo CSV <span aria-hidden="true">↓</span></button></div><div id="chart" class="chart" aria-label="Monthly revenue chart"></div>
+        <div class="table-wrap"><table><caption>Synthetic source data</caption><thead><tr><th scope="col">Month</th><th scope="col">Revenue</th><th scope="col">Orders</th><th scope="col">On time</th><th scope="col">Service cases</th></tr></thead><tbody id="data-table"></tbody></table></div><p id="insight" class="insight" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <footer><a class="footer-name" href="index.html">Wendi Ji<span>Data, people and practical progress.</span></a><p>Professional experience · Interactive demos · Academic projects</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
