@@ -18,6 +18,10 @@ Both interactive dashboards use synthetic data and are separate from professiona
 
 The MSc project summarises MTHM017: Advanced Topics in Statistics. Figures come from the coursework report's printed R outputs and confusion matrices on pages 45–53 where prose differs (RBF SVM: 85.6%). These are results from one 750/250 train/test split, not a new benchmark or rerun. Methodological limitations and further development ideas are included. The original report and datasets are not bundled with the site.
 
+## Visual design
+
+A shared dark navy and teal palette, one system sans-serif font stack, and consistent heading, body and caption sizes across all three pages. Responsive layouts retain readable text instead of shrinking labels on mobile. No external font downloads are required.
+
 ## Preview and publishing
 
 No build step or package installation is required. Serve the directory with a static web server or open `index.html` locally. Dashboard scripts are loaded only on `dashboards.html`; the overview and academic page work without JavaScript.
