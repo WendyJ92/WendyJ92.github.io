@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive purchase, sales and inventory cockpit by Wendi Ji. Explore stock movements, replenishment and receivables using entirely synthetic data.">
+  <meta name="theme-color" content="#0b121b">
+  <title>Inventory cockpit | Wendi Ji</title>
+  <link rel="stylesheet" href="assets/style.css?v=20261014-dark">
+  <link rel="stylesheet" href="assets/inventory.css?v=20261019">
+  <script src="assets/inventory-data.js?v=20261019" defer></script>
+  <script src="assets/inventory.js?v=20261019" defer></script>
+</head>
+<body id="top" class="inventory-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navigation">
+    <a class="brand" href="index.html">Wendi Ji<span>Data & Operations</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#skills">Skills</a><a href="index.html#work">Experience</a><a href="dashboards.html" aria-current="page">Dashboards</a><a href="academic.html">Academic</a><a class="nav-external" href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="inv-intro" aria-labelledby="page-title">
+      <a class="inv-back" href="index.html#portfolio">← Portfolio overview</a>
+      <div class="inv-title-row"><div><p class="eyebrow">BUSINESS TOOLS / INTERACTIVE DEMONSTRATION</p><h1 id="page-title">Inventory cockpit</h1></div><span class="inv-demo-badge">Synthetic data · Q3 2026</span></div>
+      <p>Purchases, sales and stock in one view. Follow the movement of goods, spot replenishment needs and track unpaid invoices.</p>
+    </section>
+    <section class="inv-workspace" aria-label="Purchase, sales and inventory dashboard">
+      <noscript><p class="inv-notice">Enable JavaScript to use the filters, calculated balances and downloads. This portfolio demonstration contains only fictional records. The calculation rules are available below.</p></noscript>
+      <div id="inv-app" hidden>
+        <form id="inv-filters" class="inv-filter-bar" aria-label="Dashboard filters">
+          <label for="inv-period">Reporting period<select id="inv-period" name="period"></select></label>
+          <label for="inv-warehouse">Warehouse<select id="inv-warehouse" name="warehouse"></select></label>
+          <label for="inv-category">Product category<select id="inv-category" name="category"></select></label>
+          <button id="inv-reset" type="button">Reset view</button>
+        </form>
+        <p id="inv-scope" class="inv-scope" role="status"></p>
+        <dl id="inv-kpis" class="inv-kpis" aria-label="Selected scope metrics"></dl>
+        <div class="inv-tabs" role="tablist" aria-label="Explore the inventory cockpit">
+          <button id="tab-overview" type="button" role="tab" aria-selected="true" aria-controls="panel-overview" tabindex="0" data-tab="overview">Overview</button>
+          <button id="tab-stock" type="button" role="tab" aria-selected="false" aria-controls="panel-stock" tabindex="-1" data-tab="stock">Stock ledger</button>
+          <button id="tab-purchases" type="button" role="tab" aria-selected="false" aria-controls="panel-purchases" tabindex="-1" data-tab="purchases">Purchases</button>
+          <button id="tab-receivables" type="button" role="tab" aria-selected="false" aria-controls="panel-receivables" tabindex="-1" data-tab="receivables">Receivables</button>
+        </div>
+        <div id="panel-overview" class="inv-panel" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+          <div class="inv-section-title"><div><h2>Stock movement</h2><p>Units during the selected period · all products use individual units</p></div><span class="inv-check">● Reconciled from the ledger</span></div>
+          <dl id="inv-flow" class="inv-flow" aria-label="Opening stock plus receipts minus sales and samples equals closing stock"></dl>
+          <div class="inv-overview-grid">
+            <article class="inv-card"><div class="inv-card-heading"><h3>Inflow & outflow</h3><ul class="inv-legend"><li><i class="inv-received" aria-hidden="true"></i>Received</li><li><i class="inv-sold" aria-hidden="true"></i>Sold</li></ul></div><p class="inv-note">Units received and dispatched as sales. Sample issues appear separately in the stock bridge above.</p><div id="inv-trend" class="inv-trend"></div></article>
+            <article class="inv-card inv-attention"><div class="inv-card-heading"><h3>Needs attention</h3><span class="inv-dot" aria-hidden="true"></span></div><div id="inv-alerts"></div></article>
+          </div>
+          <div class="inv-section-title inv-stock-preview-heading"><div><h3>Stock to review</h3><p>Low stock first, then excess stock · up to six product–warehouse pairs</p></div><button type="button" data-go="stock">Explore stock ledger <span aria-hidden="true">→</span></button></div>
+          <div class="table-wrap inv-table-wrap" tabindex="0" role="region" aria-label="Stock to review; scroll horizontally for all columns"><table><caption id="inv-preview-caption"></caption><thead><tr><th scope="col">Product / SKU</th><th scope="col">Warehouse</th><th scope="col" class="num">On hand</th><th scope="col" class="num">Days of cover</th><th scope="col">Status</th></tr></thead><tbody id="inv-stock-preview"></tbody></table></div>
+        </div>
+        <div id="panel-stock" class="inv-panel" role="tabpanel" aria-labelledby="tab-stock" tabindex="0" hidden>
+          <div class="inv-section-title"><div><h2>Stock ledger</h2><p>Opening balances, movements and closing stock by SKU and warehouse.</p></div><button type="button" data-export="stock">Download stock CSV <span aria-hidden="true">↓</span></button></div>
+          <div class="inv-table-filters"><label for="inv-search">Find a product<input id="inv-search" type="search" placeholder="Product name or SKU" autocomplete="off"></label><label for="inv-stock-status">Stock status<select id="inv-stock-status"><option value="all">All statuses</option><option>Low stock</option><option>Healthy</option><option>Excess</option></select></label></div>
+          <p id="inv-stock-count" class="inv-note" role="status"></p>
+          <div class="table-wrap inv-table-wrap" tabindex="0" role="region" aria-label="Stock ledger; scroll horizontally for all columns"><table><caption>These local filters affect this table and its CSV only. Select a product to inspect its movements.</caption><thead><tr><th scope="col">Product / SKU</th><th scope="col">Warehouse</th><th scope="col" class="num">Opening</th><th scope="col" class="num">Received</th><th scope="col" class="num">Sold</th><th scope="col" class="num">Samples</th><th scope="col" class="num">On hand</th><th scope="col" class="num">Value</th><th scope="col" class="num">Cover</th><th scope="col">Status</th></tr></thead><tbody id="inv-stock-table"></tbody></table></div>
+          <section id="inv-movement-detail" class="inv-detail" aria-labelledby="inv-detail-title" hidden><div class="inv-section-title"><div><h3 id="inv-detail-title" tabindex="-1"></h3><p id="inv-detail-note"></p></div><button type="button" data-export="movements">Download movements CSV <span aria-hidden="true">↓</span></button></div><div class="table-wrap inv-table-wrap" tabindex="0" role="region" aria-label="Selected product movements; scroll horizontally for all columns"><table><caption>Selected-period inventory movements. Positive quantities add stock; negative quantities remove stock. Values use fixed unit cost.</caption><thead><tr><th scope="col">Date</th><th scope="col">Reference</th><th scope="col">Type</th><th scope="col" class="num">Units</th><th scope="col" class="num">Cost value</th></tr></thead><tbody id="inv-movement-table"></tbody></table></div></section>
+        </div>
+        <div id="panel-purchases" class="inv-panel" role="tabpanel" aria-labelledby="tab-purchases" tabindex="0" hidden>
+          <div class="inv-section-title"><div><h2>Purchases & incoming stock</h2><p>Received goods enter stock; open purchase orders remain separate.</p></div><button type="button" data-export="purchases">Download open orders CSV <span aria-hidden="true">↓</span></button></div>
+          <dl id="inv-purchase-summary" class="inv-mini-metrics"></dl>
+          <h3>Open purchase orders</h3><div class="table-wrap inv-table-wrap" tabindex="0" role="region" aria-label="Open purchase orders; scroll horizontally for all columns"><table><caption id="inv-po-caption"></caption><thead><tr><th scope="col">Order</th><th scope="col">Product</th><th scope="col">Warehouse</th><th scope="col">Expected</th><th scope="col" class="num">Units</th><th scope="col" class="num">Cost</th><th scope="col">Status</th></tr></thead><tbody id="inv-po-table"></tbody></table></div>
+          <div class="inv-section-title inv-receipts-heading"><div><h3>Goods received</h3><p>Receipts during the selected period, valued at fixed unit cost.</p></div><button type="button" data-export="receipts">Download receipts CSV <span aria-hidden="true">↓</span></button></div><div class="table-wrap inv-table-wrap" tabindex="0" role="region" aria-label="Goods receipts; scroll horizontally for all columns"><table><caption>Only received quantities are included in the stock bridge.</caption><thead><tr><th scope="col">Received</th><th scope="col">Reference</th><th scope="col">Product</th><th scope="col">Warehouse</th><th scope="col" class="num">Units</th><th scope="col" class="num">Cost</th></tr></thead><tbody id="inv-receipts-table"></tbody></table></div>
+        </div>
+        <div id="panel-receivables" class="inv-panel" role="tabpanel" aria-labelledby="tab-receivables" tabindex="0" hidden>
+          <div class="inv-section-title"><div><h2>Receivables & collections</h2><p>Invoice balances as of period end, including earlier unpaid invoices.</p></div><button type="button" data-export="receivables">Download invoices CSV <span aria-hidden="true">↓</span></button></div>
+          <dl id="inv-ar-summary" class="inv-mini-metrics"></dl>
+          <div class="table-wrap inv-table-wrap" tabindex="0" role="region" aria-label="Invoices and collections; scroll horizontally for all columns"><table><caption id="inv-ar-caption"></caption><thead><tr><th scope="col">Invoice / customer</th><th scope="col">Warehouse</th><th scope="col">Issued</th><th scope="col">Due</th><th scope="col" class="num">Invoiced</th><th scope="col" class="num">Paid to date</th><th scope="col" class="num">Unpaid</th><th scope="col">Status</th></tr></thead><tbody id="inv-ar-table"></tbody></table></div>
+        </div>
+        <p id="inv-download-status" class="inv-download-status" role="status"></p>
+      </div>
+    </section>
+    <section class="inv-case" aria-labelledby="inv-case-title">
+      <div><p class="eyebrow">FROM WORKBOOK TO COCKPIT</p><h2 id="inv-case-title">Making operational data useful</h2><p>This demonstration takes the reporting structure of my Excel sales and shipment workbook and extends it into an interactive purchase, sales and inventory view.</p><p>Linked invoice payments, calculated stock balances and replenishment signals are additions built for this portfolio. Every product, customer, order and figure shown here is fictional.</p><ul class="entry-tags" aria-label="Skills demonstrated"><li>Business data modelling</li><li>Reconciliation logic</li><li>Operations reporting</li><li>Dashboard design</li></ul></div>
+      <details class="inv-method"><summary>Calculation rules & scope</summary><div><h3>Stock and value</h3><p>Opening stock + received purchases − dispatched sales − sample issues = closing stock. Each SKU has a fixed unit cost; inventory value is closing units × that cost. Purchase receipt value is the cost of goods received, not cash paid to suppliers. VAT, returns, transfers, reservations and supplier payments are outside this demonstration.</p><h3>Stock health</h3><p>Low stock means on-hand units are at or below the SKU reorder point. Otherwise, more than 90 days of cover, or positive stock with no period sales, is labelled Excess. Cover = closing stock ÷ average daily sales during the selected period. A suggested top-up targets the greater of the reorder point or 30 days of sales, less on-hand units; check incoming orders before acting. These are illustrative planning rules, not demand forecasts.</p><h3>Receivables and timing</h3><p>Outstanding = invoices issued through period end − payments received through that date. An unpaid invoice is overdue when its due date is before period end. Collections measure receipts during the selected period, including payments for earlier invoices. Sales and collections therefore need not match. Each demonstration invoice contains one SKU so product filters remain consistent.</p><h3>Fixed demonstration</h3><p>July–September 2026, with opening stock on 30 June. All dates use calendar days. Period filters change flows and the closing snapshot; warehouse and category filters apply throughout. This browser-based portfolio example does not connect to an employer system or place orders.</p></div></details>
+    </section>
+  </main>
+  <footer><a class="footer-name" href="index.html">Wendi Ji<span>Data, people and practical progress.</span></a><p>Portfolio demonstration · Entirely synthetic data</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
