@@ -11,7 +11,8 @@
 .inventory-feature-visual dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin-block: 24px; }
 .inventory-feature-visual dt { color: var(--muted); font-size: 12px; }
 .inventory-feature-visual dd { font-size: 36px; line-height: 1.4; font-weight: 600; color: var(--accent); }
-.inventory-feature-visual dl > div:last-child dd { color: var(--warning); }
+.inventory-feature-visual dl > div:last-child dd { color: #b6a0ef; }
+.inventory-feature-flow strong { color: var(--warning); font-weight: 500; }
 .inventory-feature-flow { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; margin-bottom: 16px; }
 .inventory-feature-flow b { color: var(--accent); font-weight: 400; }
 .inventory-feature-compact { display: block; margin: 24px 0 0; padding: 24px; }

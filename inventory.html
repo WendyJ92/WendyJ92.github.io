@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An interactive purchase, sales and inventory cockpit by Wendi Ji. Explore stock movements, replenishment and receivables using entirely synthetic data.">
+  <meta name="description" content="A PSI performance dashboard by Wendi Ji. Explore sales, stock trends, a transparent 30-day demand baseline and replenishment priorities with synthetic data.">
   <meta name="theme-color" content="#0b121b">
-  <title>Inventory cockpit | Wendi Ji</title>
+  <title>PSI performance dashboard | Wendi Ji</title>
   <link rel="stylesheet" href="assets/style.css?v=20261014-dark">
-  <link rel="stylesheet" href="assets/inventory.css?v=20261019">
+  <link rel="stylesheet" href="assets/inventory.css?v=20261019-psi2">
   <script src="assets/inventory-data.js?v=20261019" defer></script>
-  <script src="assets/inventory.js?v=20261019" defer></script>
+  <script src="assets/psi-planning.js?v=20261019-psi2" defer></script>
+  <script src="assets/psi-report.js?v=20261019-psi2" defer></script>
+  <script src="assets/inventory.js?v=20261019-psi2" defer></script>
 </head>
 <body id="top" class="inventory-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,8 +22,8 @@
   <main id="main">
     <section class="inv-intro" aria-labelledby="page-title">
       <a class="inv-back" href="index.html#portfolio">← Portfolio overview</a>
-      <div class="inv-title-row"><div><p class="eyebrow">BUSINESS TOOLS / INTERACTIVE DEMONSTRATION</p><h1 id="page-title">Inventory cockpit</h1></div><span class="inv-demo-badge">Synthetic data · Q3 2026</span></div>
-      <p>Purchases, sales and stock in one view. Follow the movement of goods, spot replenishment needs and track unpaid invoices.</p>
+      <div class="inv-title-row"><div><p class="eyebrow">BUSINESS ANALYTICS / PURCHASE · SALES · INVENTORY</p><h1 id="page-title">PSI performance dashboard</h1></div><span class="inv-demo-badge">Synthetic data · Q3 2026</span></div>
+      <p>Understand current performance. Anticipate stock gaps. Turn the numbers into a replenishment plan.</p>
     </section>
     <section class="inv-workspace" aria-label="Purchase, sales and inventory dashboard">
       <noscript><p class="inv-notice">Enable JavaScript to use the filters, calculated balances and downloads. This portfolio demonstration contains only fictional records. The calculation rules are available below.</p></noscript>
@@ -33,7 +35,8 @@
           <button id="inv-reset" type="button">Reset view</button>
         </form>
         <p id="inv-scope" class="inv-scope" role="status"></p>
-        <dl id="inv-kpis" class="inv-kpis" aria-label="Selected scope metrics"></dl>
+        <dl id="inv-kpis" class="inv-kpis" aria-label="Inventory and planning metrics"></dl>
+        <dl id="psi-business-summary" class="psi-business-summary" aria-label="Selected period financial measures"></dl>
         <div class="inv-tabs" role="tablist" aria-label="Explore the inventory cockpit">
           <button id="tab-overview" type="button" role="tab" aria-selected="true" aria-controls="panel-overview" tabindex="0" data-tab="overview">Overview</button>
           <button id="tab-stock" type="button" role="tab" aria-selected="false" aria-controls="panel-stock" tabindex="-1" data-tab="stock">Stock ledger</button>
@@ -41,14 +44,37 @@
           <button id="tab-receivables" type="button" role="tab" aria-selected="false" aria-controls="panel-receivables" tabindex="-1" data-tab="receivables">Receivables</button>
         </div>
         <div id="panel-overview" class="inv-panel" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
-          <div class="inv-section-title"><div><h2>Stock movement</h2><p>Units during the selected period · all products use individual units</p></div><span class="inv-check">● Reconciled from the ledger</span></div>
-          <dl id="inv-flow" class="inv-flow" aria-label="Opening stock plus receipts minus sales and samples equals closing stock"></dl>
-          <div class="inv-overview-grid">
-            <article class="inv-card"><div class="inv-card-heading"><h3>Inflow & outflow</h3><ul class="inv-legend"><li><i class="inv-received" aria-hidden="true"></i>Received</li><li><i class="inv-sold" aria-hidden="true"></i>Sold</li></ul></div><p class="inv-note">Units received and dispatched as sales. Sample issues appear separately in the stock bridge above.</p><div id="inv-trend" class="inv-trend"></div></article>
-            <article class="inv-card inv-attention"><div class="inv-card-heading"><h3>Needs attention</h3><span class="inv-dot" aria-hidden="true"></span></div><div id="inv-alerts"></div></article>
+          <div class="psi-report-grid">
+            <article class="inv-card psi-history-card">
+              <div class="inv-card-heading"><div><p class="psi-card-kicker">PERFORMANCE</p><h2>Sales & inventory trend</h2></div><span class="psi-unit">Units</span></div>
+              <p class="inv-note">Inventory is the balance at each interval end. Sales are units dispatched during each interval.</p>
+              <div id="psi-history-chart" class="psi-history-chart"></div>
+              <p id="psi-chart-detail" class="psi-chart-detail" role="status"></p>
+              <details class="psi-chart-data"><summary>View chart data</summary><div class="table-wrap" tabindex="0" role="region" aria-label="Sales and inventory chart data"><table><caption>Actual synthetic ledger values for the selected scope.</caption><thead><tr><th scope="col">Interval</th><th scope="col" class="num">Closing stock</th><th scope="col" class="num">Sales</th><th scope="col" class="num">Receipts</th></tr></thead><tbody id="psi-history-table"></tbody></table></div></details>
+            </article>
+            <article class="inv-card psi-mix-card">
+              <div class="inv-card-heading"><div><p class="psi-card-kicker">SALES COMPOSITION</p><h2>Product mix</h2></div><span class="psi-unit">Units sold</span></div>
+              <div class="psi-mix-body"><div id="psi-donut" class="psi-donut" aria-hidden="true"><div><strong id="psi-mix-total"></strong><span>units sold</span></div></div><ul id="psi-mix-legend" class="psi-mix-legend" aria-label="Sales by product category"></ul></div>
+              <p class="inv-note">Share of dispatched units during the selected reporting period.</p>
+            </article>
+            <article class="inv-card psi-outlook-card">
+              <div class="inv-card-heading"><div><p class="psi-card-kicker">FORWARD VIEW</p><h2>30-day inventory outlook</h2></div><span class="psi-baseline-tag">Baseline estimate</span></div>
+              <p id="psi-horizon" class="inv-note"></p>
+              <dl id="psi-outlook" class="psi-outlook"></dl>
+              <p id="psi-estimate-note" class="psi-estimate-note"></p>
+              <p id="psi-incoming-note" class="psi-incoming-note"></p>
+              <a class="text-link psi-method-link" href="#psi-method">How the estimate is calculated <span aria-hidden="true">↓</span></a>
+            </article>
+            <article class="inv-card psi-products-card">
+              <div class="inv-card-heading"><div><p class="psi-card-kicker">PRODUCT PERFORMANCE</p><h2>Sales by product</h2></div><div class="psi-measure-switch" role="group" aria-label="Product sales measure"><button type="button" data-measure="units" aria-pressed="true">Units</button><button type="button" data-measure="revenue" aria-pressed="false">Revenue</button></div></div>
+              <div id="psi-product-bars" class="psi-product-bars"></div><p class="inv-note">Select a product to inspect its stock ledger.</p>
+            </article>
           </div>
-          <div class="inv-section-title inv-stock-preview-heading"><div><h3>Stock to review</h3><p>Low stock first, then excess stock · up to six product–warehouse pairs</p></div><button type="button" data-go="stock">Explore stock ledger <span aria-hidden="true">→</span></button></div>
-          <div class="table-wrap inv-table-wrap" tabindex="0" role="region" aria-label="Stock to review; scroll horizontally for all columns"><table><caption id="inv-preview-caption"></caption><thead><tr><th scope="col">Product / SKU</th><th scope="col">Warehouse</th><th scope="col" class="num">On hand</th><th scope="col" class="num">Days of cover</th><th scope="col">Status</th></tr></thead><tbody id="inv-stock-preview"></tbody></table></div>
+          <div class="inv-section-title psi-plan-heading"><div><p class="psi-card-kicker">DECISIONS & NEXT STEPS</p><h2>Replenishment priorities</h2><p id="psi-plan-scope"></p></div><button type="button" data-export="planning">Download planning CSV <span aria-hidden="true">↓</span></button></div>
+          <div class="psi-plan-toolbar"><label for="psi-risk">Planning status<select id="psi-risk"><option value="attention">Needs attention</option><option value="all">All positions</option><option value="Shortage">Projected shortage</option><option value="Reorder">Below reorder point</option><option value="Excess">Excess cover</option><option value="Healthy">Healthy</option></select></label><p id="psi-plan-count" class="inv-note" role="status"></p></div>
+          <div class="table-wrap inv-table-wrap" tabindex="0" role="region" aria-label="Replenishment planning table; scroll horizontally for all columns"><table><caption>Rows represent product–warehouse pairs. Negative projected units indicate unmet demand. Suggested orders restore the reorder buffer at the horizon end.</caption><thead><tr><th scope="col">Product / warehouse</th><th scope="col" class="num">On hand</th><th scope="col" class="num">Due in 30d</th><th scope="col" class="num">Forecast 30d</th><th scope="col" class="num">Projected</th><th scope="col" class="num">Cover now</th><th scope="col">Risk</th><th scope="col">Suggested next step</th></tr></thead><tbody id="psi-planning-table"></tbody></table></div>
+          <p class="psi-planning-limit">This is an end-of-horizon planning signal, not a guarantee of stock availability on every intervening day. Check delivery timing, lead times and order quantities before acting.</p>
+          <details class="psi-reconcile"><summary>Reconcile historical stock movements</summary><p class="inv-note">Actual stock movement during the selected reporting period. Each product uses individual units.</p><dl id="inv-flow" class="inv-flow" aria-label="Opening stock plus receipts minus sales and samples equals closing stock"></dl></details>
         </div>
         <div id="panel-stock" class="inv-panel" role="tabpanel" aria-labelledby="tab-stock" tabindex="0" hidden>
           <div class="inv-section-title"><div><h2>Stock ledger</h2><p>Opening balances, movements and closing stock by SKU and warehouse.</p></div><button type="button" data-export="stock">Download stock CSV <span aria-hidden="true">↓</span></button></div>
@@ -72,8 +98,8 @@
       </div>
     </section>
     <section class="inv-case" aria-labelledby="inv-case-title">
-      <div><p class="eyebrow">FROM WORKBOOK TO COCKPIT</p><h2 id="inv-case-title">Making operational data useful</h2><p>This demonstration takes the reporting structure of my Excel sales and shipment workbook and extends it into an interactive purchase, sales and inventory view.</p><p>Linked invoice payments, calculated stock balances and replenishment signals are additions built for this portfolio. Every product, customer, order and figure shown here is fictional.</p><ul class="entry-tags" aria-label="Skills demonstrated"><li>Business data modelling</li><li>Reconciliation logic</li><li>Operations reporting</li><li>Dashboard design</li></ul></div>
-      <details class="inv-method"><summary>Calculation rules & scope</summary><div><h3>Stock and value</h3><p>Opening stock + received purchases − dispatched sales − sample issues = closing stock. Each SKU has a fixed unit cost; inventory value is closing units × that cost. Purchase receipt value is the cost of goods received, not cash paid to suppliers. VAT, returns, transfers, reservations and supplier payments are outside this demonstration.</p><h3>Stock health</h3><p>Low stock means on-hand units are at or below the SKU reorder point. Otherwise, more than 90 days of cover, or positive stock with no period sales, is labelled Excess. Cover = closing stock ÷ average daily sales during the selected period. A suggested top-up targets the greater of the reorder point or 30 days of sales, less on-hand units; check incoming orders before acting. These are illustrative planning rules, not demand forecasts.</p><h3>Receivables and timing</h3><p>Outstanding = invoices issued through period end − payments received through that date. An unpaid invoice is overdue when its due date is before period end. Collections measure receipts during the selected period, including payments for earlier invoices. Sales and collections therefore need not match. Each demonstration invoice contains one SKU so product filters remain consistent.</p><h3>Fixed demonstration</h3><p>July–September 2026, with opening stock on 30 June. All dates use calendar days. Period filters change flows and the closing snapshot; warehouse and category filters apply throughout. This browser-based portfolio example does not connect to an employer system or place orders.</p></div></details>
+      <div><p class="eyebrow">FROM WORKBOOK TO COCKPIT</p><h2 id="inv-case-title">From reporting to inventory decisions</h2><p>This demonstration takes the reporting structure of my Excel sales and shipment workbook and extends it into an interactive purchase, sales and inventory view.</p><p>Stock planning, linked invoice payments and the demand baseline are additions built for this portfolio. Every product, customer, order and figure shown here is fictional. This is an interactive web demonstration.</p><ul class="entry-tags" aria-label="Skills demonstrated"><li>Business data modelling</li><li>Reconciliation logic</li><li>Operations reporting</li><li>Dashboard design</li></ul></div>
+      <details id="psi-method" class="inv-method"><summary>Calculation rules & scope</summary><div><h3>Stock and value</h3><p>Opening stock + received purchases − dispatched sales − sample issues = closing stock. Each SKU has a fixed unit cost; inventory value is closing units × that cost. Purchase receipt value is the cost of goods received, not cash paid to suppliers. VAT, returns, transfers, reservations and supplier payments are outside this demonstration.</p><h3>Current stock health</h3><p>Low stock means on-hand units are at or below the SKU reorder point. Otherwise, more than 90 days of cover, or positive stock with no period sales, is labelled Excess. Cover = closing stock ÷ average daily sales during the selected period. The stock ledger uses this historical view; the planning table evaluates the future balance separately.</p><h3>30-day baseline and replenishment</h3><p>For each product–warehouse pair, forecast demand = sales during the last 30 observed calendar days ÷ observed days × 30, rounded up to whole units before aggregation. Zero-sale days are included. Only history available by the snapshot is used. This simple baseline has no seasonality adjustment or measured accuracy claim.</p><p>Projected net stock = on hand + qualifying purchase quantities expected in the next 30 days − baseline demand. Only orders placed and still unreceived at the snapshot qualify. Unreceived orders due on or before the snapshot are excluded until their delivery dates are confirmed; open orders do not necessarily mean goods are in transit.</p><p>Shortage means projected units &lt; 0; Reorder means projected units ≥ 0 but below the reorder point. Suggested order = max(0, reorder point − projected units). Otherwise, cover above 90 days or positive stock without recent sales is Excess; remaining positions are Healthy. Planning cover uses trailing daily demand. Forecast samples, returns, reservations, lead times and minimum order quantities are not modelled.</p><h3>Receivables and timing</h3><p>Outstanding = invoices issued through period end − payments received through that date. An unpaid invoice is overdue when its due date is before period end. Collections measure receipts during the selected period, including payments for earlier invoices. Sales and collections therefore need not match. Each demonstration invoice contains one SKU so product filters remain consistent.</p><h3>Fixed demonstration</h3><p>July–September 2026, with opening stock on 30 June. All dates use calendar days. Period filters change flows and the closing snapshot; warehouse and category filters apply throughout. This browser-based portfolio example does not connect to an employer system or place orders.</p></div></details>
     </section>
   </main>
   <footer><a class="footer-name" href="index.html">Wendi Ji<span>Data, people and practical progress.</span></a><p>Portfolio demonstration · Entirely synthetic data</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>

@@ -21,6 +21,7 @@
     search: '', status: 'all', selected: null
   };
   let view;
+  let plan;
   let stockRows = [];
   let selectedMovements = [];
   const options = (items, selected) => items.map(i => `<option value="${escape(i.id)}"${i.id === selected ? ' selected' : ''}>${escape(i.label || i.name)}</option>`).join('');
@@ -52,32 +53,18 @@
       $('panel-' + name).hidden = !active;
     });
     if (focus) $('tab-' + tab).focus();
+    if (tab === 'overview') requestAnimationFrame(() => window.PSIReport.resize());
     updateURL();
   }
   const smallMetric = (title,value,note) => `<div><dt>${escape(title)}</dt><dd>${escape(value)}<small>${escape(note)}</small></dd></div>`;
   function renderOverview() {
-    const low = view.stockRows.filter(r=>r.status==='Low stock');
-    const excess = view.stockRows.filter(r=>r.status==='Excess');
-    const late = view.purchaseOrders.filter(r=>r.status==='Overdue');
-    const overdueInvoices = view.invoices.filter(r=>r.status==='Overdue');
     $('inv-flow').innerHTML = [
       ['','Opening stock',view.openingUnits],['+','Purchases received',view.receivedUnits],
       ['−','Sales dispatched',view.soldUnits],['−','Samples issued',view.sampleUnits],['=','Closing stock',view.closingUnits]
     ].map(([symbol,label,value])=>`<div><dt><span aria-hidden="true">${symbol}</span>${label}</dt><dd>${number(value)}</dd></div>`).join('');
-    const max = Math.max(1,...view.trend.flatMap(r=>[r.received,r.sold]));
-    $('inv-trend').innerHTML = view.trend.map(r=>`<div class="inv-trend-row"><span class="inv-trend-label">${escape(r.label)}</span><div class="inv-trend-bars">${[['received','Received'],['sold','Sold']].map(([key,label])=>`<div class="inv-trend-line" aria-label="${escape(r.label)}: ${label.toLowerCase()} ${r[key]} units"><div class="inv-trend-track" aria-hidden="true"><span class="inv-${key}" style="width:${r[key]/max*100}%"></span></div><b aria-hidden="true">${number(r[key])}</b></div>`).join('')}</div></div>`).join('');
-    const alerts = [
-      [low.length,'Stock positions needing replenishment','At or below reorder point · review incoming stock','stock','Low stock'],
-      [overdueInvoices.length,'Overdue invoices',`${exactMoney(view.overdueCents)} still unpaid at period end`,'receivables','all'],
-      [late.length,'Late purchase orders','Expected receipt date has passed','purchases','all'],
-      [excess.length,'Stock positions with excess cover','More than 90 days at this period’s sales rate','stock','Excess']
-    ];
-    $('inv-alerts').innerHTML = alerts.map(([n,title,note,tab,status])=>`<button type="button" class="inv-alert" data-go="${tab}" data-status="${status}"><strong>${n}</strong><span><b>${title}</b><small>${escape(note)}</small></span><span aria-hidden="true">→</span></button>`).join('');
-    const rank = {'Low stock':0,'Excess':1,'Healthy':2};
-    const preview = [...view.stockRows].sort((a,b)=>rank[a.status]-rank[b.status] || a.closing-b.closing).slice(0,6);
-    $('inv-preview-caption').textContent = `On-hand stock as at ${date(view.end)}. Cover uses sales during ${view.label}.`;
-    $('inv-stock-preview').innerHTML = preview.map(r=>`<tr><td><strong>${escape(r.name)}</strong><small>${escape(r.sku)}</small></td><td>${escape(r.warehouseName)}</td><td class="num">${number(r.closing)}</td><td class="num">${cover(r.coverDays)}</td><td>${badge(r.status)}</td></tr>`).join('') || empty(5,'No products in this scope.');
+    window.PSIReport.render(plan, view);
   }
+
   function renderStock() {
     const query = state.search.trim().toLowerCase();
     stockRows = view.stockRows.filter(r=>(state.status==='all'||r.status===state.status) && `${r.name} ${r.sku}`.toLowerCase().includes(query));
@@ -93,7 +80,8 @@
     if (!r) return;
     selectedMovements = view.movements.filter(m=>m.product===r.name && m.warehouse===r.warehouse);
     $('inv-detail-title').textContent = `${r.name} · ${r.warehouseName}`;
-    $('inv-detail-note').textContent = `Reorder point: ${r.reorderPoint} units. Suggested top-up: ${r.suggestedOrder} units before allowing for incoming orders.`;
+    const outlook = plan.rows.find(p => p.sku === r.sku && p.warehouse === r.warehouse);
+    $('inv-detail-note').textContent = `Reorder point: ${r.reorderPoint} units. Planning top-up: ${outlook.suggestedOrder} units, allowing for ${outlook.dueSoon} units expected in the next 30 days. Verify timing before acting.`;
     $('inv-movement-table').innerHTML = selectedMovements.map(m=>`<tr><td>${date(m.date)}</td><td>${escape(m.id)}</td><td>${escape(m.type)}</td><td class="num">${m.quantity>0?'+':''}${number(m.quantity)}</td><td class="num">${exactMoney(m.valueCents)}</td></tr>`).join('') || empty(5,'No stock movements during this period.');
     if (focus) $('inv-detail-title').focus();
   }
@@ -123,23 +111,21 @@
   }
   function render() {
     view = model.view(state);
+    plan = window.PSIPlanning.view(state);
     const locationLabel = state.warehouse==='all' ? 'All warehouses' : warehouseName(state.warehouse);
     $('inv-scope').textContent = `${view.label} · ${locationLabel} · ${state.category==='all'?'All categories':state.category} · Balances as at ${date(view.end)} · GBP, excluding VAT`;
-    $('inv-kpis').innerHTML = [
-      ['Sales dispatched',view.salesValueCents,`${number(view.soldUnits)} units during period`,false],
-      ['Purchases received',view.receivedValueCents,`${number(view.receivedUnits)} units at cost`,false],
-      ['Closing inventory',view.stockValueCents,`${number(view.closingUnits)} units on hand`,true],
-      ['Outstanding receivables',view.outstandingCents,`${money(view.overdueCents)} overdue at period end`,false]
-    ].map(([label,value,note,emphasis])=>`<div${emphasis?' class="inv-emphasis"':''}><dt>${label}</dt><dd>${exactMoney(value)}<small>${escape(note)}</small></dd></div>`).join('');
     renderOverview(); renderStock(); renderPurchases(); renderReceivables();
     $('inv-download-status').textContent='';
     updateURL();
   }
   function download(kind) {
     let rows, columns;
-    if (kind==='stock') {
+    if (kind==='planning') {
+      rows=window.PSIReport.getPlanningRows().map(r=>({...r,horizonEnd:plan.horizonEnd,lookbackStart:plan.lookbackStart,lookbackDays:plan.lookbackDays}));
+      columns=[['sku','SKU'],['name','Product'],['warehouseName','Warehouse'],['horizonEnd','Forecast horizon end'],['lookbackStart','Baseline observation start'],['lookbackDays','Observed calendar days'],['onHand','On-hand units'],['onOrder','Open purchase units'],['dueSoon','Expected receipts next 30 days'],['overdueIncoming','Unreceived units due by snapshot'],['forecast','Baseline demand next 30 days'],['projected','Projected net units'],['coverDays','Days of cover now',v=>v==null?'':v.toFixed(1)],['reorderPoint','Reorder buffer units'],['suggestedOrder','Suggested order units'],['risk','Planning status'],['reason','Reason']];
+    } else if (kind==='stock') {
       rows=stockRows;
-      columns=[['sku','SKU'],['name','Product'],['warehouseName','Warehouse'],['opening','Opening units'],['received','Received units'],['sold','Sold units'],['samples','Sample units'],['closing','Closing units'],['valueCents','Stock value GBP',v=>(v/100).toFixed(2)],['reorderPoint','Reorder point'],['coverDays','Days of cover',v=>v==null?'':v.toFixed(2)],['suggestedOrder','Suggested top-up units before incoming'],['status','Status']];
+      columns=[['sku','SKU'],['name','Product'],['warehouseName','Warehouse'],['opening','Opening units'],['received','Received units'],['sold','Sold units'],['samples','Sample units'],['closing','Closing units'],['valueCents','Stock value GBP',v=>(v/100).toFixed(2)],['reorderPoint','Reorder point'],['coverDays','Days of cover',v=>v==null?'':v.toFixed(2)],['status','Status']];
     } else if (kind==='purchases') {
       rows=view.purchaseOrders;
       columns=[['id','Order'],['product','Product'],['warehouse','Warehouse',warehouseName],['expectedDate','Expected date'],['quantity','Units'],['valueCents','Cost GBP',v=>(v/100).toFixed(2)],['status','Status']];
@@ -163,7 +149,7 @@
   $('inv-reset').addEventListener('click',()=>{
     Object.assign(state,{period:'2026-09',warehouse:'all',category:'all',tab:'overview',search:'',status:'all',selected:null});
     ['period','warehouse','category'].forEach(k=>$('inv-'+k).value=state[k]);
-    $('inv-search').value=''; $('inv-stock-status').value='all'; render();chooseTab('overview');
+    $('inv-search').value=''; $('inv-stock-status').value='all'; window.PSIReport.reset(); render();chooseTab('overview');
   });
   $('inv-search').addEventListener('input',e=>{state.search=e.target.value;renderStock();});
   $('inv-stock-status').addEventListener('change',e=>{state.status=e.target.value;renderStock();});
@@ -181,6 +167,14 @@
     if(b.dataset.go){
       state.search=''; $('inv-search').value='';
       state.status=b.dataset.status||'all'; $('inv-stock-status').value=state.status;renderStock();chooseTab(b.dataset.go,true);
+    }
+    if(b.dataset.product){
+      state.search=b.dataset.product;state.status='all';state.selected=null;
+      $('inv-search').value=state.search;$('inv-stock-status').value='all';renderStock();chooseTab('stock',true);
+    }
+    if(b.dataset.planSku){
+      state.search=b.dataset.planSku;state.status='all';$('inv-search').value=state.search;$('inv-stock-status').value='all';renderStock();
+      state.selected=view.stockRows.find(r=>r.sku===b.dataset.planSku&&r.warehouse===b.dataset.planWarehouse);chooseTab('stock');renderMovements(true);
     }
     if(b.dataset.export) download(b.dataset.export);
     if(b.dataset.sku){state.selected=view.stockRows.find(r=>r.sku===b.dataset.sku&&r.warehouse===b.dataset.warehouse);renderMovements(true);}
