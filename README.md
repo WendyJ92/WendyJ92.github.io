@@ -4,7 +4,7 @@ Wendi Ji's professional portfolio, published at [wendyj92.github.io](https://wen
 
 ## Pages
 
-- **[Overview](https://wendyj92.github.io/)** — capabilities, a professional Python/AI validation case, career timeline, and links to demonstrations and academic projects.
+- **[Overview](https://wendyj92.github.io/)** — a personal introduction, selected reporting projects, a professional Python validation case, skills, a career timeline and separate academic work.
 - **[Interactive dashboards](https://wendyj92.github.io/dashboards.html)** — project delivery risks and operations reporting, with filters and CSV downloads.
 - **[PSI performance dashboard](https://wendyj92.github.io/inventory.html)** — a dedicated purchase, sales and inventory demonstration, extended from the structure of an Excel reporting workbook. Includes sales and stock trends, product mix, a 30-day demand baseline, replenishment priorities, stock movements, incoming orders, receivables and scoped CSV exports.
 - **[Academic projects](https://wendyj92.github.io/academic.html)** — University of Exeter MSc coursework, methods, reported results, reflections and education.
@@ -21,7 +21,7 @@ The MSc project summarises MTHM017: Advanced Topics in Statistics. Figures come 
 
 ## Visual design
 
-A shared dark navy and teal palette, one system sans-serif font stack, and consistent heading, body and caption sizes across all pages. Responsive layouts retain readable text instead of shrinking labels on mobile. No external font downloads are required.
+A shared dark palette, one system sans-serif font stack, and consistent heading, body and caption sizes across all pages. The homepage uses restrained colour, project rows, a screenshot from the working PSI dashboard, and optional role details to reduce repetition. Its CSS is isolated in `home.css`; shared dashboard styles remain unchanged. Responsive layouts retain readable text instead of shrinking labels on mobile. No external font downloads are required.
 
 ## Preview and publishing
 

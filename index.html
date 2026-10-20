@@ -3,94 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Wendi Ji's portfolio: data analysis, practical AI automation, career experience, interactive dashboards and separate academic projects.">
-  <meta name="theme-color" content="#0b121b">
-  <title>Data, AI & Operations | Wendi Ji</title>
+  <meta name="description" content="Wendi Ji — data analysis and commercial operations. Work experience, interactive reporting projects and MSc statistics coursework.">
+  <meta name="theme-color" content="#10161d">
+  <title>Wendi Ji | Data analysis & operations</title>
   <link rel="stylesheet" href="assets/style.css?v=20261014-dark">
-  <link rel="stylesheet" href="assets/layout.css?v=20261019-psi2">
+  <link rel="stylesheet" href="assets/home.css?v=20261020">
 </head>
-<body id="top">
+<body id="top" class="portfolio-home">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="navigation">
-    <a class="brand" href="index.html">Wendi Ji<span>Data & Operations</span></a>
-    <nav aria-label="Main navigation"><a href="index.html#skills">Skills</a><a href="index.html#work">Experience</a><a href="dashboards.html">Dashboards</a><a href="academic.html">Academic</a><a class="nav-external" href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a></nav>
+    <a class="brand" href="index.html" aria-current="page">Wendi Ji<span>Data analysis & operations</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#portfolio">Projects</a><a href="#work">Experience</a><a href="#skills">Skills</a><a href="academic.html">Academic</a><a class="nav-external" href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
   <main id="main">
-    <section id="home" class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">DATA ANALYSIS · AI AUTOMATION · OPERATIONS</p>
-        <h1 id="hero-title">Data, AI & <span>business operations.</span></h1>
-        <p class="intro">I'm Wendi Ji. I use data, Python and AI tools to make everyday operations clearer and more reliable — combining hands-on analysis with careful validation and practical delivery.</p>
-        <div class="actions"><a class="button" href="#practice">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="#work">Career experience <span aria-hidden="true">↘</span></a></div>
+    <section id="home" class="home-intro" aria-labelledby="hero-title">
+      <div>
+        <p class="intro-location">Newcastle upon Tyne, UK</p>
+        <h1 id="hero-title">Wendi Ji</h1>
+        <p class="intro-role">Data analysis & commercial operations</p>
+        <p class="intro-text">I work with sales, customer and stock data. My background spans banking analytics in China and commercial operations in the UK.</p>
+        <p class="intro-text">This is a collection of my reporting projects, a few things I’ve learned at work, and my MSc coursework.</p>
+        <div class="intro-links"><a class="text-link" href="#portfolio">View projects <span aria-hidden="true">↓</span></a><a class="quiet-link" href="#work">Read my experience</a></div>
       </div>
-      <aside class="hero-summary" aria-label="Professional background">
-        <p>Newcastle upon Tyne, UK</p>
-        <dl class="credentials"><div><dt>9 years</dt><dd>Banking, technology and commercial operations</dd></div><div><dt>MSc</dt><dd>Applied Data Science & Statistics · Exeter</dd></div><div><dt>PMP</dt><dd>Project Management Professional</dd></div></dl>
+      <aside class="intro-note" aria-label="Current work and background">
+        <div><p class="small-label">Currently</p><p>Senior Operations Executive</p><span>FEOBAWAVE LIMITED · UK</span></div>
+        <div><p class="small-label">Previously</p><p>Commercial operations & banking analytics</p><span>Trade Zen Global · Ping An · CITIC</span></div>
+        <div><p class="small-label">Education</p><p>MSc Applied Data Science & Statistics</p><span>University of Exeter · 2022–2023</span></div>
       </aside>
     </section>
-    <section id="skills" aria-labelledby="skills-title">
-      <div class="section-heading"><div><p class="eyebrow">SKILLS</p><h2 id="skills-title">Key capabilities</h2></div><p>Four connected strengths, grounded in business questions and the detail needed to answer them well.</p></div>
-      <div class="skills-grid">
-        <article class="skill-card"><span class="skill-number" aria-hidden="true">01</span><h3>Data analysis & reporting</h3><p>Explore business performance, investigate data issues and turn findings into useful reports.</p><ul class="skill-tags" aria-label="Analysis tools"><li>SQL / MySQL</li><li>Python</li><li>Tableau</li><li>Excel</li><li>R</li></ul><a class="skill-link" href="#ping-an">Reporting at Ping An <span aria-hidden="true">↗</span></a></article>
-        <article class="skill-card"><span class="skill-number" aria-hidden="true">02</span><h3>AI-assisted automation</h3><p>Use Python and LLM APIs to process data, review generated logic and check results against business rules.</p><ul class="skill-tags" aria-label="Automation tools and methods"><li>Python</li><li>LLM APIs</li><li>Data validation</li></ul><a class="skill-link" href="#practice">A real validation example <span aria-hidden="true">↗</span></a></article>
-        <article class="skill-card"><span class="skill-number" aria-hidden="true">03</span><h3>Project & process delivery</h3><p>Clarify requirements, coordinate teams and track the practical changes needed to improve a process.</p><ul class="skill-tags" aria-label="Delivery skills"><li>Jira</li><li>Stakeholders</li><li>Process improvement</li></ul><a class="skill-link" href="#citic">Customer process improvement <span aria-hidden="true">↗</span></a></article>
-        <article class="skill-card"><span class="skill-number" aria-hidden="true">04</span><h3>Commercial operations</h3><p>Connect sales, stock, payments and costs to decisions about performance and day-to-day operations.</p><ul class="skill-tags" aria-label="Operations skills"><li>CRM</li><li>Inventory</li><li>Reconciliation</li></ul><a class="skill-link" href="#feobawave">My current role <span aria-hidden="true">↗</span></a></article>
+
+    <section id="portfolio" aria-labelledby="portfolio-title">
+      <div class="home-section-heading"><h2 id="portfolio-title">Selected projects</h2><p>Independent reporting projects. All dashboard data is synthetic.</p></div>
+      <article class="selected-project" id="inventory-demo">
+        <div class="project-copy">
+          <p class="small-label">Purchase, sales & inventory</p>
+          <h3>What needs replenishing?</h3>
+          <p>I used the structure of an Excel stock tracker as the starting point for this dashboard, bringing sales, incoming orders and stock balances into one view.</p>
+          <p>It estimates stock at the end of the next 30 days and highlights possible shortages. You can check the calculations, filter the report and trace a balance back to its stock movements.</p>
+          <p class="project-note">HTML / JavaScript · Simulated transactions · Simple demand baseline</p>
+          <a class="project-link" href="inventory.html">Open PSI dashboard <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="project-figure">
+          <a href="inventory.html" aria-label="Open the interactive PSI performance dashboard"><img src="assets/psi-dashboard-preview.png?v=20261020" width="1392" height="1175" alt="PSI dashboard with period, warehouse and category filters, stock indicators, sales trends and a product mix chart. All figures are synthetic." fetchpriority="high" decoding="async"></a>
+          <figcaption>From the working dashboard · September 2026 demo</figcaption>
+        </figure>
+      </article>
+      <div class="project-list">
+        <article id="project-demo"><div><h3><a href="dashboards.html#project-demo">Project delivery & delays <span aria-hidden="true">↗</span></a></h3><p>Compare planned and forecast dates across three workstreams. Review overdue tasks, reasons for delay and next steps.</p></div><p class="project-type">Interactive demo<br><span>Synthetic data</span></p></article>
+        <article id="demo"><div><h3><a href="dashboards.html#demo">Operations performance <span aria-hidden="true">↗</span></a></h3><p>A monthly view of revenue, fulfilment and service cases, with the underlying figures available to download.</p></div><p class="project-type">Interactive demo<br><span>Synthetic data</span></p></article>
       </div>
     </section>
-    <section id="practice" aria-labelledby="practice-title">
-      <div class="section-heading"><div><p class="eyebrow">IN PRACTICE</p><h2 id="practice-title">Selected professional work</h2></div><p>A closer look at my work at FEOBAWAVE: applying automation, investigating its output and keeping the underlying business relationships intact.</p></div>
-      <article class="work-case" aria-labelledby="case-title">
-        <div class="case-heading"><div><p class="eyebrow">FEOBAWAVE LIMITED · PROFESSIONAL EXPERIENCE</p><h3 id="case-title">Correcting store attribution in Python</h3></div><ul class="case-tools" aria-label="Tools used"><li>Python</li><li>LLM APIs</li><li>Excel / CSV</li></ul></div>
-        <ol class="case-steps">
-          <li><span class="case-step-number">01 / THE PROBLEM</span><h4>Missing stores.</h4><p>AI-generated Python logic excluded stores with more than one historical sales representative. That rule did not reflect how store relationships changed over time.</p></li>
-          <li><span class="case-step-number">02 / MY CONTRIBUTION</span><h4>Review the logic.</h4><p>I identified and corrected the faulty logic, cross-checked the results using a second LLM, and documented a review procedure.</p></li>
-          <li><span class="case-step-number">03 / THE RESULT</span><h4>Keep both views.</h4><p>The corrected processing retained historical sales relationships and assigned each store to its most recent representative, resolving the store-exclusion error.</p></li>
-        </ol>
-        <div class="case-principle"><p><strong>How I choose the tool</strong>For store classification, sales analysis, cleaning and extraction, I select between API automation and conversational AI according to task complexity, output quality and cost.</p><a href="#feobawave">More about this role <span aria-hidden="true">↓</span></a></div>
+
+    <section id="practice" class="practice-section" aria-labelledby="practice-title">
+      <div class="practice-label"><p class="small-label">From my current role</p><h2 id="practice-title">A reporting issue<br> I worked through</h2><p>FEOBAWAVE LIMITED</p></div>
+      <article class="practice-story" aria-labelledby="case-title">
+        <h3 id="case-title">Restoring stores dropped by a Python script</h3>
+        <p>An AI-generated Python script was dropping stores that had more than one sales representative in their history. I traced the issue to the filtering logic and corrected it.</p>
+        <p>The revised process kept the historical relationships and linked each store to its latest representative. I checked the results with a second LLM and documented the review steps.</p>
+        <div class="reporting-rule"><p class="small-label">The reporting rule</p><dl><div><dt>Current ownership</dt><dd>Use the most recent representative.</dd></div><div><dt>Sales history</dt><dd>Keep the earlier relationships.</dd></div></dl></div>
+        <p class="practice-note">This describes my work; employer data and code are not published here.</p>
       </article>
     </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="home-section-heading"><h2 id="skills-title">Skills I use</h2></div>
+      <dl class="skills-list">
+        <div><dt>Analysis & reporting</dt><dd><p>Query data, investigate discrepancies and build recurring reports.</p><span>SQL / MySQL · Python · Tableau · Excel · R</span></dd></div>
+        <div><dt>Automation & data checks</dt><dd><p>Process Excel and CSV files, review generated code and check business rules.</p><span>Python · LLM APIs · Data validation</span></dd></div>
+        <div><dt>Project coordination</dt><dd><p>Clarify requirements, follow up dependencies and track delivery.</p><span>Jira · Stakeholder communication · Process improvement</span></dd></div>
+        <div><dt>Commercial operations</dt><dd><p>Work through stock needs, customer follow-up and payment differences.</p><span>CRM · Inventory planning · Reconciliation</span></dd></div>
+      </dl>
+    </section>
+
     <section id="work" aria-labelledby="work-title">
-      <div class="section-heading"><div><p class="eyebrow">EXPERIENCE</p><h2 id="work-title">Career experience</h2></div><p>From customer analytics in China to commercial operations in the UK. Four professional roles, most recent first.</p></div>
+      <div class="home-section-heading"><h2 id="work-title">Experience</h2><p>My work in the UK and China, most recent first.</p></div>
       <ol class="timeline">
         <li class="timeline-item" id="feobawave">
-          <div class="timeline-date"><p><time datetime="2025-06">Jun 2025</time><span class="date-separator">—</span>Present</p><span class="timeline-status">Current role</span></div>
-          <article class="timeline-content"><p class="eyebrow">FEOBAWAVE LIMITED <span class="entry-location">· UNITED KINGDOM</span></p><h3>Senior Operations Executive</h3><p>Combine operational analysis, Python automation and data checks to support UK sales, customer management and financial controls.</p><ul class="experience-points"><li><strong>Automation & validation.</strong> Use Python in VS Code and LLM APIs to batch-process Excel and CSV files for store classification, sales analysis, data cleaning and information extraction.</li><li><strong>Customer & sales insight.</strong> Validate reports against sales, visit and product-coverage KPIs; analyse purchasing cycles to flag overdue customer follow-up and recommend CRM reminder rules.</li><li><strong>CRM transition.</strong> Support the move from Feishu tables to CRM by standardising data fields and customer identifiers, investigating issues and clarifying requirements with Sales, Finance and technical colleagues.</li><li><strong>Payment reconciliation.</strong> Compare Accounts Receivable payment records with CRM sales and orders, investigate differences and support improvements to order review and payment verification.</li><li><strong>Operational planning.</strong> Built an Excel purchase, sales and inventory tracker; check bonuses and commissions against KPI rules, and prepare weekly analysis of performance gaps, stock needs and emerging risks.</li></ul><a class="timeline-case-link" href="#practice">Read the Python validation example <span aria-hidden="true">↗</span></a><ul class="entry-tags" aria-label="Skills used"><li>Python & LLM APIs</li><li>Data quality</li><li>CRM migration</li><li>Reconciliation</li></ul></article>
+          <div class="timeline-date"><p><time datetime="2025-06">Jun 2025</time> – Present</p><span class="timeline-category">United Kingdom</span></div>
+          <article class="timeline-content">
+            <p class="employer">FEOBAWAVE LIMITED</p><h3>Senior Operations Executive</h3>
+            <p>I support UK sales and operations through reporting, data checks and payment reconciliation.</p>
+            <ul class="experience-points"><li>Use Python and LLM APIs to process Excel and CSV files for store classification, sales analysis, cleaning and extraction.</li><li>Support the move from Feishu tables to CRM by standardising fields and customer identifiers, and working through requirements with Sales, Finance and technical colleagues.</li><li>Reconcile Accounts Receivable payments with CRM sales and orders, investigating differences and improving verification steps.</li></ul>
+            <details class="role-details"><summary>More about this role</summary><ul class="experience-points"><li>Check sales, visit and product-coverage KPIs; analyse purchasing cycles to flag overdue follow-up and recommend CRM reminder rules.</li><li>Built an Excel purchase, sales and inventory tracker. Check bonuses and commissions against KPI rules and prepare weekly analysis of performance gaps, stock needs and risks.</li><li>Select between API automation and conversational AI according to the task, output quality and cost.</li></ul><a class="text-link" href="#practice">Read the Python example <span aria-hidden="true">↑</span></a></details>
+          </article>
         </li>
         <li class="timeline-item" id="trade-zen">
-          <div class="timeline-date"><p><time datetime="2024-04">Apr 2024</time><span class="date-separator">—</span><time datetime="2025-05">May 2025</time></p><span class="timeline-category">Commercial operations</span></div>
-          <article class="timeline-content"><p class="eyebrow">TRADE ZEN GLOBAL <span class="entry-location">· UNITED KINGDOM</span></p><h3>UK Market Operations</h3><p>Managed UK market operations for C&S (Jie Rou) products as an overseas sales partner, from import planning to retail distribution.</p><ul class="experience-points"><li>Coordinated purchasing, international transport and imports; calculated landed costs to inform pricing and margins.</li><li>Developed supermarket and retail accounts, coordinating listings, stock availability, promotions and customer follow-up.</li><li>Worked with suppliers, logistics providers and retailers to coordinate requirements, resolve issues and keep activities on schedule.</li></ul><p class="timeline-highlight"><span>Focus</span>Connecting the numbers with the realities of running a business.</p><ul class="entry-tags" aria-label="Skills used"><li>Import planning</li><li>Pricing & margins</li><li>Retail operations</li></ul></article>
+          <div class="timeline-date"><p><time datetime="2024-04">Apr 2024</time> – <time datetime="2025-05">May 2025</time></p><span class="timeline-category">United Kingdom</span></div>
+          <article class="timeline-content"><p class="employer">TRADE ZEN GLOBAL</p><h3>UK Market Operations</h3><p>Managed UK operations for C&S (Jie Rou) products as an overseas sales partner, from import planning to retail distribution.</p><details class="role-details"><summary>Role details</summary><ul class="experience-points"><li>Coordinated purchasing, international transport and imports; calculated landed costs to inform pricing and margins.</li><li>Coordinated retail listings, stock availability, promotions and customer follow-up.</li><li>Worked with suppliers, logistics providers and retailers to resolve issues and keep activities on schedule.</li></ul></details></article>
         </li>
         <li class="timeline-item" id="ping-an">
-          <div class="timeline-date"><p><time datetime="2021-03">Mar 2021</time><span class="date-separator">—</span><time datetime="2022-08">Aug 2022</time></p><span class="timeline-category">Technology & analytics</span></div>
-          <article class="timeline-content"><p class="eyebrow">PING AN TECHNOLOGY <span class="entry-location">· CHINA</span></p><h3>Data Analyst</h3><p>Combined hands-on analysis with the coordination of a five-person analytics team, translating business needs into dependable reporting.</p><ul class="experience-points"><li>Used SQL to extract and join reporting data, and Python and Tableau to automate daily and weekly financial and operational reports.</li><li>Built dashboards tracking delays in banking-system table updates and bank-asset reporting, following up data-quality and timing issues.</li><li>Used Jira to assign tasks, monitor milestones and follow up delivery issues for a five-person team, coordinating requirements and dependencies with business and technical colleagues.</li></ul><p class="timeline-highlight"><span>Scope</span><strong>Five-person analytics team</strong> · priorities, delivery and data quality.</p><ul class="entry-tags" aria-label="Skills used"><li>Python</li><li>Tableau</li><li>Data quality</li><li>Team coordination</li></ul></article>
+          <div class="timeline-date"><p><time datetime="2021-03">Mar 2021</time> – <time datetime="2022-08">Aug 2022</time></p><span class="timeline-category">China</span></div>
+          <article class="timeline-content"><p class="employer">PING AN TECHNOLOGY</p><h3>Data Analyst</h3><p>Built financial and operational reports using SQL, Python and Tableau, and coordinated delivery for a five-person analytics team.</p><details class="role-details"><summary>Role details</summary><ul class="experience-points"><li>Extracted and joined reporting data with SQL, and automated daily and weekly reports.</li><li>Investigated missing or delayed data, checked reporting dependencies and followed up data-quality issues.</li><li>Used Jira to assign tasks, monitor milestones and follow up delivery issues with business and technical colleagues.</li></ul></details></article>
         </li>
         <li class="timeline-item" id="citic">
-          <div class="timeline-date"><p><time datetime="2015-03">Mar 2015</time><span class="date-separator">—</span><time datetime="2021-02">Feb 2021</time></p><span class="timeline-category">Banking & customer service</span></div>
-          <article class="timeline-content"><p class="eyebrow">CHINA CITIC BANK CREDIT CARD CENTER <span class="entry-location">· CHINA</span></p><h3>Data Analyst <span class="role-detail">Customer Service Centre</span></h3><p>Used customer service and customer journey data to identify process problems and turn findings into operational improvements.</p><ul class="experience-points"><li>Coordinated a credit-card customer personalisation project, tracking milestones, actions and progress to support delivery.</li><li>Monitored service KPIs and investigated performance differences, repeated contacts and customer feedback.</li><li>Led a credit-card application process improvement, supporting more efficient and consistent handling.</li></ul><p class="timeline-highlight result"><span>Impact</span><strong>115 fewer manual processing instances per day</strong>, on average.</p><ul class="entry-tags" aria-label="Skills used"><li>Customer analytics</li><li>KPI reporting</li><li>Process improvement</li></ul></article>
+          <div class="timeline-date"><p><time datetime="2015-03">Mar 2015</time> – <time datetime="2021-02">Feb 2021</time></p><span class="timeline-category">China</span></div>
+          <article class="timeline-content"><p class="employer">CHINA CITIC BANK CREDIT CARD CENTER</p><h3>Data Analyst <span class="role-detail">Customer Service Centre</span></h3><p>Analysed customer service data and repeat contacts to support improvements to the credit-card application process.</p><p class="experience-result">The process changes reduced manual enquiries by an average of <strong>115 a day</strong>.</p><details class="role-details"><summary>Role details</summary><ul class="experience-points"><li>Supported a credit-card customer personalisation project, tracking milestones, actions and progress.</li><li>Monitored service KPIs and investigated performance differences, repeated contacts and customer feedback.</li><li>Supported analysis and validation for changes to the application process.</li></ul></details></article>
         </li>
       </ol>
-      <p class="experience-note">My education and MSc coursework have their own space in <a href="academic.html">Academic projects ↗</a>.</p>
     </section>
-    <section id="portfolio" aria-labelledby="portfolio-title">
-      <div class="section-heading"><div><p class="eyebrow">PORTFOLIO</p><h2 id="portfolio-title">Dashboard demonstrations</h2></div><p>Business reporting ideas brought to life with interactive filters and entirely synthetic data. Explore a featured PSI performance dashboard and two further demonstrations.</p></div>
-      <article class="inventory-feature" id="inventory-demo">
-        <div class="inventory-feature-copy"><p class="eyebrow">FEATURED BUSINESS TOOL · SYNTHETIC DATA</p><h3>PSI performance dashboard</h3><p>Connect sales trends and stock balances with a transparent 30-day demand baseline. Review expected receipts, identify projected shortages and explore replenishment priorities.</p><ul class="entry-tags" aria-label="Skills demonstrated"><li>Data modelling</li><li>Demand baselines</li><li>Replenishment planning</li></ul><a class="button" href="inventory.html">Explore PSI dashboard <span aria-hidden="true">↗</span></a></div>
-        <div class="inventory-feature-visual" aria-label="Synthetic September 2026 snapshot: 486 units on hand, 312 units of baseline demand over the next 30 days, four positions with projected shortages"><p>SEPTEMBER 2026 · DEMO SNAPSHOT</p><dl><div><dt>Units on hand</dt><dd>486</dd></div><div><dt>30-day demand baseline</dt><dd>312</dd></div></dl><div class="inventory-feature-flow"><span>Projected shortages</span><strong>4 positions</strong></div><p>Illustrative baseline · 6 products · 2 warehouses</p></div>
-      </article>
-      <div class="demo-previews">
-        <article class="demo-preview" id="project-demo"><div class="preview-visual delivery-preview" aria-label="Synthetic project snapshot: 4 overdue tasks, maximum forecast delay 10 days"><div><span>Open overdue tasks</span><strong>4</strong></div><div><span>Largest forecast delay</span><strong>10 <small>days</small></strong></div><p>Fixed snapshot · 30 Sep 2026</p></div><div class="preview-copy"><p class="eyebrow">SYNTHETIC DATA</p><h3>Project delivery & delays</h3><p>Filter three workstreams, compare planned and forecast dates, and explore reasons for delay and next steps.</p><a class="text-link" href="dashboards.html#project-demo">Open project dashboard <span aria-hidden="true">↗</span></a></div></article>
-        <article class="demo-preview" id="demo"><div class="preview-visual operations-preview" aria-label="Synthetic revenue: April £42,000, May £46,500, June £51,000"><div class="preview-bars" aria-hidden="true"><div><span style="height:82.35%"></span><b>Apr</b></div><div><span style="height:91.18%"></span><b>May</b></div><div><span style="height:100%"></span><b>Jun</b></div></div><div class="preview-total"><span>Three-month revenue</span><strong>£139,500</strong><p>Illustrative operations data</p></div></div><div class="preview-copy"><p class="eyebrow">SYNTHETIC DATA</p><h3>Operations performance</h3><p>Explore revenue, fulfilment and service cases by month, with the source figures available as a CSV download.</p><a class="text-link" href="dashboards.html#demo">Open operations dashboard <span aria-hidden="true">↗</span></a></div></article>
-      </div>
-    </section>
-    <section id="academic-project" class="academic-preview-section" aria-labelledby="academic-preview-title">
-      <div class="academic-preview-heading"><p class="eyebrow">UNIVERSITY WORK</p><h2 id="academic-preview-title">Academic projects</h2><p>University coursework, with its methods, reported results and learning reflections.</p><a class="text-link" href="academic.html">Explore academic projects <span aria-hidden="true">↗</span></a></div>
-      <article class="academic-preview-card" id="exeter"><p class="eyebrow">UNIVERSITY OF EXETER · MSc COURSEWORK</p><h3>Bayesian inference & classification</h3><p>Modelling variation in reaction times and comparing classification methods in R.</p><ul class="entry-tags" aria-label="Project tools"><li>R / JAGS</li><li>caret</li><li>Model evaluation</li></ul><div class="academic-preview-meta"><span>MTHM017 · Advanced Topics in Statistics</span><a href="academic.html#academic-project" aria-label="Read the Bayesian inference and classification case study">View case study <span aria-hidden="true">↗</span></a></div></article>
-    </section>
-    <section id="about" class="about" aria-labelledby="about-title">
-      <div><p class="eyebrow">ABOUT</p><h2 id="about-title">Background & interests</h2><p class="about-intro">I enjoy work where detailed analysis meets coordination, clear communication and improvements people can use.</p><a class="text-link" href="https://github.com/WendyJ92">Find me on GitHub <span aria-hidden="true">↗</span></a></div>
-      <div class="background-list"><div><h3>Education & credentials</h3><p><strong>MSc Applied Data Science & Statistics</strong><br>University of Exeter · 2022–2023</p><p><strong>Bachelor's Degree in Public Administration</strong><br>Hunan University of Humanities, Science and Technology · 2011–2015</p><p><strong>Project Management Professional (PMP)</strong></p></div><div><h3>Tools I work with</h3><p>SQL / MySQL · Python · LLM APIs · Pandas · NumPy · Tableau · Excel · R / RStudio · Jira · CRM systems · Xero</p></div><div><h3>Where I can contribute</h3><p>Reporting & MI · Operations analytics · Commercial insight · Sales operations · Project coordination</p></div></div>
+
+    <section id="academic-project" class="academic-section" aria-labelledby="academic-title">
+      <div class="home-section-heading"><h2 id="academic-title">Academic work</h2><p>A separate collection of university work, methods and reported results.</p></div>
+      <article class="academic-project" id="exeter"><div><p class="small-label">University of Exeter · MSc coursework</p><h3>Bayesian inference & classification</h3><p>Modelling variation in reaction times and comparing classification methods in R. The write-up covers the methods, reported results and limitations.</p><p class="project-note">MTHM017 · Advanced Topics in Statistics · R / JAGS / caret</p><a class="project-link" href="academic.html#academic-project">Read the project <span aria-hidden="true">↗</span></a></div><div class="education-note" id="about"><h3>Education & certification</h3><p><strong>MSc Applied Data Science & Statistics</strong><br>University of Exeter · 2022–2023</p><p><strong>Bachelor’s Degree in Public Administration</strong><br>Hunan University of Humanities, Science and Technology · 2011–2015</p><p>Project Management Professional (PMP)</p></div></article>
     </section>
   </main>
-  <footer><a class="footer-name" href="index.html">Wendi Ji<span>Data, people and practical progress.</span></a><p>Professional experience · Interactive demos · Academic projects</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <footer><p><strong>Wendi Ji</strong><br>Newcastle upon Tyne, UK</p><div><a href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></footer>
 </body>
 </html>
