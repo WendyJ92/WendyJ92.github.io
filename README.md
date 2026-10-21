@@ -21,7 +21,9 @@ The MSc project summarises MTHM017: Advanced Topics in Statistics. Figures come 
 
 ## Visual design
 
-A shared dark palette, one system sans-serif font stack, and consistent heading, body and caption sizes across all pages. The homepage uses restrained colour, folder links and optional role details. Its CSS is isolated in `home.css`; project overview pages use `projects.css`. The PSI screenshot is shown inside its project folder. Shared dashboard styles remain unchanged. Responsive layouts retain readable text instead of shrinking labels on mobile. No external font downloads are required.
+A light professional palette uses Deep Navy (`#14263D`) for headings, Professional Blue (`#2563EB`) for links and primary buttons, and Muted Teal (`#0F766E`) for analysis highlights and charts. The main background is White (`#FFFFFF`); content panels use Light Grey (`#F1F5F9`). Warning states retain distinct, readable colours.
+
+The homepage keeps its project-folder structure. All pages share the same palette and system sans-serif font stack, with no external font download. Page-specific CSS handles layout, while shared colour tokens live in `assets/style.css`. The PSI project preview is a screenshot of the working light-theme dashboard.
 
 ## Preview and publishing
 

@@ -7,7 +7,7 @@
   const gbp = n => new Intl.NumberFormat('en-GB', {style:'currency',currency:'GBP'}).format(n/100);
   const day = d => new Date(d+'T00:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});
   const nextDay = d => new Date(Date.parse(d+'T00:00:00Z')+86400000).toISOString().slice(0,10);
-  const colours = ['#79aaff','#62d4b6','#b6a0ef'];
+  const colours = ['#2563EB','#0F766E','#14263D'];
   const categories = root.InventoryModel.categories;
   const colour = name => colours[categories.indexOf(name)%colours.length];
   let plan, actual, measure='units', risk='attention', selectedPoint=0, planningRows=[];
@@ -31,12 +31,12 @@
     const path=plan.history.map((r,i)=>(i?'L':'M')+xs[i]+','+yStock(r.closing)).join(' ');
     let svg=`<svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="group" aria-label="Sales and inventory trends. Each series has its own labelled scale. Focus a time interval for values."><text class="psi-axis-title" x="0" y="17">Closing stock · interval end</text><text class="psi-axis-title" x="0" y="182">Sales · during interval</text>`;
     [[stockMax,yStock],[salesMax,ySale]].forEach(([max,y])=>[0,max/2,max].forEach(n=>{svg+=`<line class="psi-gridline" x1="${left}" x2="${w-right}" y1="${y(n)}" y2="${y(n)}"/><text class="psi-axis-label" x="${left-8}" y="${y(n)+4}" text-anchor="end">${num(n)}</text>`;}));
-    svg+=`<path d="${path} L${xs.at(-1)},140 L${xs[0]},140 Z" fill="#79aaff" fill-opacity=".08"/><path d="${path}" fill="none" stroke="#79aaff" stroke-width="2.5"/>`;
+    svg+=`<path d="${path} L${xs.at(-1)},140 L${xs[0]},140 Z" fill="#2563EB" fill-opacity=".08"/><path d="${path}" fill="none" stroke="#2563EB" stroke-width="2.5"/>`;
     plan.history.forEach((r,i)=>{
       const title=`${r.label}: closing stock ${r.closing}, sales ${r.sold}, receipts ${r.received} units`;
       const short=r.label.replace(/ 2026/g,'').replace(/ (Jul|Aug|Sep)$/,'');
       const barWidth=Math.min(38,step*.5);
-      svg+=`<g class="psi-chart-point${i===selectedPoint?' is-active':''}" role="button" tabindex="0" data-point="${i}" aria-label="${esc(title)}"><title>${esc(title)}</title><rect class="psi-hit" x="${xs[i]-step/2}" y="26" width="${step}" height="258" fill="transparent"/><circle class="psi-focus-ring" cx="${xs[i]}" cy="${yStock(r.closing)}" r="8" fill="none" stroke="#e7eff6" stroke-width="2"/><circle cx="${xs[i]}" cy="${yStock(r.closing)}" r="4" fill="#79aaff"/><rect x="${xs[i]-barWidth/2}" y="${ySale(r.sold)}" width="${barWidth}" height="${278-ySale(r.sold)}" rx="3" fill="#62d4b6"/><text class="psi-axis-label" x="${xs[i]}" y="302" text-anchor="middle">${esc(short)}</text></g>`;
+      svg+=`<g class="psi-chart-point${i===selectedPoint?' is-active':''}" role="button" tabindex="0" data-point="${i}" aria-label="${esc(title)}"><title>${esc(title)}</title><rect class="psi-hit" x="${xs[i]-step/2}" y="26" width="${step}" height="258" fill="transparent"/><circle class="psi-focus-ring" cx="${xs[i]}" cy="${yStock(r.closing)}" r="8" fill="none" stroke="#14263D" stroke-width="2"/><circle cx="${xs[i]}" cy="${yStock(r.closing)}" r="4" fill="#2563EB"/><rect x="${xs[i]-barWidth/2}" y="${ySale(r.sold)}" width="${barWidth}" height="${278-ySale(r.sold)}" rx="3" fill="#0F766E"/><text class="psi-axis-label" x="${xs[i]}" y="302" text-anchor="middle">${esc(short)}</text></g>`;
     });
     el.innerHTML=svg+'</svg>';
     updateChartDetail(selectedPoint);
@@ -74,7 +74,12 @@
     $('psi-estimate-note').textContent=`Demand baseline: ${num(p.lookbackDays)} calendar days ending ${day(p.asOf)}. Zero-sale days included; no seasonality adjustment. A positive total can still contain individual SKU shortages.`;
     $('psi-incoming-note').textContent=`${num(p.overdueIncomingUnits)} units due on or before the snapshot are still unreceived and excluded from expected receipts. Confirm their arrival dates.`;
     $('psi-mix-total').textContent=num(v.soldUnits);
-    let start=0;const stops=plan.categoryMix.map(r=>{const end=start+r.share*100;const stop=`${colour(r.name)} ${start}% ${end}%`;start=end;return stop;});
+    let start=0;const slices=plan.categoryMix.filter(r=>r.share>0);
+    const stops=slices.map(r=>{
+      const end=start+r.share*100,gap=slices.length>1?Math.min(.5,(end-start)/2):0;
+      const stop=`${colour(r.name)} ${start}% ${end-gap}%${gap?`, #FFFFFF ${end-gap}% ${end}%`:''}`;
+      start=end;return stop;
+    });
     $('psi-donut').style.background=v.soldUnits?`conic-gradient(${stops.join(',')})`:'var(--line)';
     $('psi-mix-legend').innerHTML=plan.categoryMix.map(r=>`<li><span><i style="background:${colour(r.name)}" aria-hidden="true"></i>${esc(r.name)}</span><strong>${num(r.share*100)}%<small>${num(r.sold)} units</small></strong></li>`).join('');
     $('psi-history-table').innerHTML=plan.history.map(r=>`<tr><th scope="row">${esc(r.label)}</th><td class="num">${num(r.closing)}</td><td class="num">${num(r.sold)}</td><td class="num">${num(r.received)}</td></tr>`).join('');

@@ -1,5 +1,4 @@
 /* Shared case-study layout for the project folders. */
-.project-page { --paper:#10161d; --white:#151e28; --ink:#e7ebee; --muted:#aab5be; --accent:#a1d5cc; --green:#83afa7; --line:#303a44; }
 .project-page .brand::before { display:none; }
 .project-page .brand { font-size:18px; }
 .project-page .brand span { font-size:13px; }

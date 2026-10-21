@@ -34,7 +34,7 @@
 .academic-results figcaption .eyebrow { margin-bottom: 12px; color: var(--muted); font-size: 12px; line-height: 1.6; letter-spacing: .04em; }
 .academic-results h3 { font-size: 22px; font-weight: 600; line-height: 1.4; letter-spacing: -.02em; }
 .academic-result-lead { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-block: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
-.academic-result-lead > strong { color: var(--accent); font-family: var(--font-sans); font-size: 44px; font-weight: 600; line-height: 1.15; letter-spacing: -.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.academic-result-lead > strong { color: var(--green); font-family: var(--font-sans); font-size: 44px; font-weight: 600; line-height: 1.15; letter-spacing: -.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .academic-result-lead > strong span { margin-left: 2px; font-size: 24px; }
 .academic-result-lead p { min-width: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
 .academic-result-lead b { color: var(--ink); font-weight: 600; }
@@ -47,7 +47,7 @@
 .academic-bar-label small { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .academic-bar-track { width: 100%; height: 10px; overflow: hidden; border-radius: 8px; background: var(--sage); }
 .academic-bar-track > span { display: block; height: 100%; border-radius: 8px; background: var(--green); }
-.academic-best .academic-bar-track > span { background: var(--accent); }
+.academic-best .academic-bar-track > span { background: var(--green); }
 .academic-chart-note { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; line-height: 1.75; }
 .academic-method { margin-top: 32px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); }
 .academic-method summary { min-height: 48px; padding: 18px 22px; color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.6; cursor: pointer; }
