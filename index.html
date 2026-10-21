@@ -3,80 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Wendi Ji — data analysis and commercial operations. Work experience, interactive reporting projects and MSc statistics coursework.">
+  <meta name="description" content="Wendi Ji — data analysis, business analysis and operations reporting. Browse project folders, work experience and academic projects.">
   <meta name="theme-color" content="#10161d">
-  <title>Wendi Ji | Data analysis & operations</title>
+  <title>Wendi Ji | Data analysis &amp; operations</title>
   <link rel="stylesheet" href="assets/style.css?v=20261014-dark">
-  <link rel="stylesheet" href="assets/home.css?v=20261020">
+  <link rel="stylesheet" href="assets/home.css?v=20261020-folders">
 </head>
 <body id="top" class="portfolio-home">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="navigation">
-    <a class="brand" href="index.html" aria-current="page">Wendi Ji<span>Data analysis & operations</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#portfolio">Projects</a><a href="#work">Experience</a><a href="#skills">Skills</a><a href="academic.html">Academic</a><a class="nav-external" href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a>
-    </nav>
+    <a class="brand" href="index.html" aria-current="page">Wendi Ji<span>Data analysis &amp; operations</span></a>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#portfolio">Projects</a><a href="#work">Experience</a><a href="#academic-project">Academic</a><a class="nav-external" href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
-    <section id="home" class="home-intro" aria-labelledby="hero-title">
-      <div>
-        <p class="intro-location">Newcastle upon Tyne, UK</p>
-        <h1 id="hero-title">Wendi Ji</h1>
-        <p class="intro-role">Data analysis & commercial operations</p>
-        <p class="intro-text">I work with sales, customer and stock data. My background spans banking analytics in China and commercial operations in the UK.</p>
-        <p class="intro-text">This is a collection of my reporting projects, a few things I’ve learned at work, and my MSc coursework.</p>
-        <div class="intro-links"><a class="text-link" href="#portfolio">View projects <span aria-hidden="true">↓</span></a><a class="quiet-link" href="#work">Read my experience</a></div>
-      </div>
-      <aside class="intro-note" aria-label="Current work and background">
-        <div><p class="small-label">Currently</p><p>Senior Operations Executive</p><span>FEOBAWAVE LIMITED · UK</span></div>
-        <div><p class="small-label">Previously</p><p>Commercial operations & banking analytics</p><span>Trade Zen Global · Ping An · CITIC</span></div>
-        <div><p class="small-label">Education</p><p>MSc Applied Data Science & Statistics</p><span>University of Exeter · 2022–2023</span></div>
-      </aside>
+    <section id="home" class="profile-header" aria-labelledby="hero-title">
+      <h1 id="hero-title">Wendi Ji</h1>
+      <p class="profile-role">Data Analyst <span aria-hidden="true">/</span> Business Analysis <span aria-hidden="true">/</span> Operations &amp; Reporting</p>
+      <p class="profile-location">Newcastle upon Tyne, United Kingdom</p>
     </section>
-
-    <section id="portfolio" aria-labelledby="portfolio-title">
-      <div class="home-section-heading"><h2 id="portfolio-title">Selected projects</h2><p>Independent reporting projects. All dashboard data is synthetic.</p></div>
-      <article class="selected-project" id="inventory-demo">
-        <div class="project-copy">
-          <p class="small-label">Purchase, sales & inventory</p>
-          <h3>What needs replenishing?</h3>
-          <p>I used the structure of an Excel stock tracker as the starting point for this dashboard, bringing sales, incoming orders and stock balances into one view.</p>
-          <p>It estimates stock at the end of the next 30 days and highlights possible shortages. You can check the calculations, filter the report and trace a balance back to its stock movements.</p>
-          <p class="project-note">HTML / JavaScript · Simulated transactions · Simple demand baseline</p>
-          <a class="project-link" href="inventory.html">Open PSI dashboard <span aria-hidden="true">↗</span></a>
-        </div>
-        <figure class="project-figure">
-          <a href="inventory.html" aria-label="Open the interactive PSI performance dashboard"><img src="assets/psi-dashboard-preview.png?v=20261020" width="1392" height="1175" alt="PSI dashboard with period, warehouse and category filters, stock indicators, sales trends and a product mix chart. All figures are synthetic." fetchpriority="high" decoding="async"></a>
-          <figcaption>From the working dashboard · September 2026 demo</figcaption>
-        </figure>
-      </article>
-      <div class="project-list">
-        <article id="project-demo"><div><h3><a href="dashboards.html#project-demo">Project delivery & delays <span aria-hidden="true">↗</span></a></h3><p>Compare planned and forecast dates across three workstreams. Review overdue tasks, reasons for delay and next steps.</p></div><p class="project-type">Interactive demo<br><span>Synthetic data</span></p></article>
-        <article id="demo"><div><h3><a href="dashboards.html#demo">Operations performance <span aria-hidden="true">↗</span></a></h3><p>A monthly view of revenue, fulfilment and service cases, with the underlying figures available to download.</p></div><p class="project-type">Interactive demo<br><span>Synthetic data</span></p></article>
-      </div>
+    <section id="about" class="profile-about" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>I work in data analysis and commercial operations, with experience in banking, technology and UK sales operations. My day-to-day work includes reporting, data checks, stock planning and payment reconciliation.</p>
     </section>
-
-    <section id="practice" class="practice-section" aria-labelledby="practice-title">
-      <div class="practice-label"><p class="small-label">From my current role</p><h2 id="practice-title">A reporting issue<br> I worked through</h2><p>FEOBAWAVE LIMITED</p></div>
-      <article class="practice-story" aria-labelledby="case-title">
-        <h3 id="case-title">Restoring stores dropped by a Python script</h3>
-        <p>An AI-generated Python script was dropping stores that had more than one sales representative in their history. I traced the issue to the filtering logic and corrected it.</p>
-        <p>The revised process kept the historical relationships and linked each store to its latest representative. I checked the results with a second LLM and documented the review steps.</p>
-        <div class="reporting-rule"><p class="small-label">The reporting rule</p><dl><div><dt>Current ownership</dt><dd>Use the most recent representative.</dd></div><div><dt>Sales history</dt><dd>Keep the earlier relationships.</dd></div></dl></div>
-        <p class="practice-note">This describes my work; employer data and code are not published here.</p>
-      </article>
+    <section id="skills" class="profile-skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Technical Skills</h2>
+      <ul class="technical-skills"><li>SQL</li><li>Python</li><li>Tableau</li><li>Excel</li><li>R</li><li>Data Quality</li><li>Jira</li><li>LLM APIs</li></ul>
     </section>
-
-    <section id="skills" aria-labelledby="skills-title">
-      <div class="home-section-heading"><h2 id="skills-title">Skills I use</h2></div>
-      <dl class="skills-list">
-        <div><dt>Analysis & reporting</dt><dd><p>Query data, investigate discrepancies and build recurring reports.</p><span>SQL / MySQL · Python · Tableau · Excel · R</span></dd></div>
-        <div><dt>Automation & data checks</dt><dd><p>Process Excel and CSV files, review generated code and check business rules.</p><span>Python · LLM APIs · Data validation</span></dd></div>
-        <div><dt>Project coordination</dt><dd><p>Clarify requirements, follow up dependencies and track delivery.</p><span>Jira · Stakeholder communication · Process improvement</span></dd></div>
-        <div><dt>Commercial operations</dt><dd><p>Work through stock needs, customer follow-up and payment differences.</p><span>CRM · Inventory planning · Reconciliation</span></dd></div>
-      </dl>
+    <section id="portfolio" class="folder-section" aria-labelledby="portfolio-title">
+      <div class="home-section-heading"><h2 id="portfolio-title">Featured Projects</h2><p>Open a folder to read the project and explore its report.</p></div>
+      <ul class="folder-list" aria-label="Project folders">
+        <li id="inventory-demo"><a class="folder-row" href="projects/inventory-sales/"><svg class="folder-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7V5.5A1.5 1.5 0 0 1 4.5 4H9l2 3h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5V7Zm0 3h18"/></svg><span class="folder-copy"><strong>Inventory &amp; Sales Forecasting Dashboard</strong><span>Stock movements, a 30-day demand baseline and replenishment priorities.</span></span><span class="folder-kind"><span>Interactive demo</span><span>Synthetic data</span></span><span class="folder-arrow" aria-hidden="true">→</span></a></li>
+        <li id="practice"><a class="folder-row" href="projects/data-quality/"><svg class="folder-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7V5.5A1.5 1.5 0 0 1 4.5 4H9l2 3h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5V7Zm0 3h18"/></svg><span class="folder-copy"><strong>Data Cleaning &amp; Quality Validation</strong><span>Correcting a Python script that excluded stores from reporting.</span></span><span class="folder-kind">Work case study</span><span class="folder-arrow" aria-hidden="true">→</span></a></li>
+        <li id="payment-demo"><a class="folder-row" href="projects/payment-reconciliation/"><svg class="folder-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7V5.5A1.5 1.5 0 0 1 4.5 4H9l2 3h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5V7Zm0 3h18"/></svg><span class="folder-copy"><strong>Payment Reconciliation Analysis</strong><span>Checking payment records against CRM sales and orders.</span></span><span class="folder-kind">Work case study</span><span class="folder-arrow" aria-hidden="true">→</span></a></li>
+        <li id="project-demo"><a class="folder-row" href="projects/project-delivery/"><svg class="folder-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7V5.5A1.5 1.5 0 0 1 4.5 4H9l2 3h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5V7Zm0 3h18"/></svg><span class="folder-copy"><strong>Project Delivery &amp; Delay Tracking</strong><span>Planned dates, forecast delays and actions across three workstreams.</span></span><span class="folder-kind"><span>Interactive demo</span><span>Synthetic data</span></span><span class="folder-arrow" aria-hidden="true">→</span></a></li>
+        <li id="demo"><a class="folder-row" href="projects/operations-reporting/"><svg class="folder-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7V5.5A1.5 1.5 0 0 1 4.5 4H9l2 3h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5V7Zm0 3h18"/></svg><span class="folder-copy"><strong>Operations Performance Reporting</strong><span>Monthly revenue, fulfilment and service-case reporting.</span></span><span class="folder-kind"><span>Interactive demo</span><span>Synthetic data</span></span><span class="folder-arrow" aria-hidden="true">→</span></a></li>
+      </ul>
     </section>
-
+    <section id="academic-project" class="folder-section academic-folders" aria-labelledby="academic-title">
+      <div class="home-section-heading"><h2 id="academic-title">Academic Projects</h2><p>University coursework, with methods, reported results and limitations.</p></div>
+      <ul class="folder-list" aria-label="Academic project folders">
+<li id="exeter"><a class="folder-row" href="projects/academic-statistics/"><svg class="folder-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7V5.5A1.5 1.5 0 0 1 4.5 4H9l2 3h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5V7Zm0 3h18"/></svg><span class="folder-copy"><strong>Bayesian Inference &amp; Classification</strong><span>Reaction-time modelling and classification methods in R.</span></span><span class="folder-kind"><span>MSc coursework</span><span>University of Exeter</span></span><span class="folder-arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
     <section id="work" aria-labelledby="work-title">
       <div class="home-section-heading"><h2 id="work-title">Experience</h2><p>My work in the UK and China, most recent first.</p></div>
       <ol class="timeline">
@@ -86,7 +54,7 @@
             <p class="employer">FEOBAWAVE LIMITED</p><h3>Senior Operations Executive</h3>
             <p>I support UK sales and operations through reporting, data checks and payment reconciliation.</p>
             <ul class="experience-points"><li>Use Python and LLM APIs to process Excel and CSV files for store classification, sales analysis, cleaning and extraction.</li><li>Support the move from Feishu tables to CRM by standardising fields and customer identifiers, and working through requirements with Sales, Finance and technical colleagues.</li><li>Reconcile Accounts Receivable payments with CRM sales and orders, investigating differences and improving verification steps.</li></ul>
-            <details class="role-details"><summary>More about this role</summary><ul class="experience-points"><li>Check sales, visit and product-coverage KPIs; analyse purchasing cycles to flag overdue follow-up and recommend CRM reminder rules.</li><li>Built an Excel purchase, sales and inventory tracker. Check bonuses and commissions against KPI rules and prepare weekly analysis of performance gaps, stock needs and risks.</li><li>Select between API automation and conversational AI according to the task, output quality and cost.</li></ul><a class="text-link" href="#practice">Read the Python example <span aria-hidden="true">↑</span></a></details>
+            <details class="role-details"><summary>More about this role</summary><ul class="experience-points"><li>Check sales, visit and product-coverage KPIs; analyse purchasing cycles to flag overdue follow-up and recommend CRM reminder rules.</li><li>Built an Excel purchase, sales and inventory tracker. Check bonuses and commissions against KPI rules and prepare weekly analysis of performance gaps, stock needs and risks.</li><li>Select between API automation and conversational AI according to the task, output quality and cost.</li></ul><a class="text-link" href="projects/data-quality/">Read the Python example <span aria-hidden="true">↑</span></a></details>
           </article>
         </li>
         <li class="timeline-item" id="trade-zen">
@@ -104,9 +72,10 @@
       </ol>
     </section>
 
-    <section id="academic-project" class="academic-section" aria-labelledby="academic-title">
-      <div class="home-section-heading"><h2 id="academic-title">Academic work</h2><p>A separate collection of university work, methods and reported results.</p></div>
-      <article class="academic-project" id="exeter"><div><p class="small-label">University of Exeter · MSc coursework</p><h3>Bayesian inference & classification</h3><p>Modelling variation in reaction times and comparing classification methods in R. The write-up covers the methods, reported results and limitations.</p><p class="project-note">MTHM017 · Advanced Topics in Statistics · R / JAGS / caret</p><a class="project-link" href="academic.html#academic-project">Read the project <span aria-hidden="true">↗</span></a></div><div class="education-note" id="about"><h3>Education & certification</h3><p><strong>MSc Applied Data Science & Statistics</strong><br>University of Exeter · 2022–2023</p><p><strong>Bachelor’s Degree in Public Administration</strong><br>Hunan University of Humanities, Science and Technology · 2011–2015</p><p>Project Management Professional (PMP)</p></div></article>
+
+    <section id="education" class="education-section" aria-labelledby="education-title">
+      <h2 id="education-title">Education &amp; Certification</h2>
+      <dl class="education-list"><div><dt>MSc Applied Data Science &amp; Statistics</dt><dd>University of Exeter · 2022–2023</dd></div><div><dt>Bachelor’s Degree in Public Administration</dt><dd>Hunan University of Humanities, Science and Technology · 2011–2015</dd></div><div><dt>Project Management Professional (PMP)</dt><dd>Professional certification</dd></div></dl>
     </section>
   </main>
   <footer><p><strong>Wendi Ji</strong><br>Newcastle upon Tyne, UK</p><div><a href="https://github.com/WendyJ92">GitHub <span aria-hidden="true">↗</span></a><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></footer>

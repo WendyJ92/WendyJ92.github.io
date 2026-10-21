@@ -4,12 +4,12 @@ Wendi Ji's professional portfolio, published at [wendyj92.github.io](https://wen
 
 ## Pages
 
-- **[Overview](https://wendyj92.github.io/)** — a personal introduction, selected reporting projects, a professional Python validation case, skills, a career timeline and separate academic work.
+- **[Overview](https://wendyj92.github.io/)** — a compact profile, technical skills, project folders, a career timeline and education.
 - **[Interactive dashboards](https://wendyj92.github.io/dashboards.html)** — project delivery risks and operations reporting, with filters and CSV downloads.
 - **[PSI performance dashboard](https://wendyj92.github.io/inventory.html)** — a dedicated purchase, sales and inventory demonstration, extended from the structure of an Excel reporting workbook. Includes sales and stock trends, product mix, a 30-day demand baseline, replenishment priorities, stock movements, incoming orders, receivables and scoped CSV exports.
 - **[Academic projects](https://wendyj92.github.io/academic.html)** — University of Exeter MSc coursework, methods, reported results, reflections and education.
 
-The homepage separates professional practice, synthetic demonstrations and university coursework. Its existing `#work`, `#feobawave`, `#project-demo`, `#demo`, `#academic-project` and `#exeter` links remain valid; the project anchors now lead to previews with links to the detailed pages.
+The homepage separates professional case studies, synthetic demonstrations and university coursework. Each project has a directory under `projects/`, with its own `index.html` overview and `README.md`; overview pages link to the existing interactive reports or academic write-up. Its existing `#work`, `#feobawave`, `#project-demo`, `#demo`, `#academic-project` and `#exeter` links remain valid; the project anchors now lead to previews with links to the detailed pages.
 
 ## Content and data
 
@@ -21,7 +21,7 @@ The MSc project summarises MTHM017: Advanced Topics in Statistics. Figures come 
 
 ## Visual design
 
-A shared dark palette, one system sans-serif font stack, and consistent heading, body and caption sizes across all pages. The homepage uses restrained colour, project rows, a screenshot from the working PSI dashboard, and optional role details to reduce repetition. Its CSS is isolated in `home.css`; shared dashboard styles remain unchanged. Responsive layouts retain readable text instead of shrinking labels on mobile. No external font downloads are required.
+A shared dark palette, one system sans-serif font stack, and consistent heading, body and caption sizes across all pages. The homepage uses restrained colour, folder links and optional role details. Its CSS is isolated in `home.css`; project overview pages use `projects.css`. The PSI screenshot is shown inside its project folder. Shared dashboard styles remain unchanged. Responsive layouts retain readable text instead of shrinking labels on mobile. No external font downloads are required.
 
 ## Preview and publishing
 
@@ -44,3 +44,14 @@ Projected net stock equals on-hand stock plus eligible expected receipts minus b
 The dashboard separates stock balances and sales flows into aligned charts with independent labelled scales, accessible data tables and keyboard-focusable intervals. Product analysis switches between units and revenue and links to the stock ledger. Six CSV exports identify synthetic origin and dates; planning exports also include the forecast horizon, lookback and calculation inputs.
 
 The implementation is buildless and dependency-free: `inventory-data.js` contains the unchanged synthetic ledger; `psi-planning.js` adds time-scoped planning calculations; `psi-report.js` renders the report overview; `inventory.js` handles detail views and exports. The default September snapshot closes at 486 units and £1,716 inventory value, with £2,110.50 outstanding receivables (£1,090 overdue). Planning uses 50 expected receipt units and 312 baseline demand units to reach 224 projected net units; four individual positions have projected shortages and four more fall below their reorder points. A positive aggregate does not remove SKU-level shortages.
+
+## Project folders
+
+- [`projects/inventory-sales/`](projects/inventory-sales/) — inventory and sales forecasting demonstration.
+- [`projects/data-quality/`](projects/data-quality/) — professional Python data-quality case.
+- [`projects/payment-reconciliation/`](projects/payment-reconciliation/) — professional payment reconciliation case.
+- [`projects/project-delivery/`](projects/project-delivery/) — synthetic project delivery dashboard.
+- [`projects/operations-reporting/`](projects/operations-reporting/) — synthetic monthly operations reporting.
+- [`projects/academic-statistics/`](projects/academic-statistics/) — MSc Bayesian inference and classification coursework.
+
+The existing `inventory.html`, `dashboards.html` and `academic.html` addresses remain available. Work case studies describe the supplied CV experience; employer data and code are not included. The homepage and folder overviews do not require JavaScript.
