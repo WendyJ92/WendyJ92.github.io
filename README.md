@@ -9,7 +9,7 @@ Wendi Ji's professional portfolio, published at [wendyj92.github.io](https://wen
 - **[PSI performance dashboard](https://wendyj92.github.io/inventory.html)** — a dedicated purchase, sales and inventory demonstration, extended from the structure of an Excel reporting workbook. Includes sales and stock trends, product mix, a 30-day demand baseline, replenishment priorities, stock movements, incoming orders, receivables and scoped CSV exports.
 - **[Academic projects](https://wendyj92.github.io/academic.html)** — University of Exeter MSc coursework, methods, reported results, reflections and education.
 
-The homepage separates professional case studies, synthetic demonstrations and university coursework. Each project has a directory under `projects/`, with its own `index.html` overview and `README.md`; overview pages link to the existing interactive reports or academic write-up. Its existing `#work`, `#feobawave`, `#project-demo`, `#demo`, `#academic-project` and `#exeter` links remain valid; the project anchors now lead to previews with links to the detailed pages.
+The homepage separates professional case studies, proposed process designs, synthetic demonstrations and university coursework. Each project has a directory under `projects/`, with its own `index.html` overview and `README.md`; overview pages link to the existing interactive reports or academic write-up. Its existing `#work`, `#feobawave`, `#project-demo`, `#demo`, `#academic-project` and `#exeter` links remain valid; the project anchors now lead to previews with links to the detailed pages.
 
 ## Content and data
 
@@ -52,8 +52,15 @@ The implementation is buildless and dependency-free: `inventory-data.js` contain
 - [`projects/inventory-sales/`](projects/inventory-sales/) — inventory and sales forecasting demonstration.
 - [`projects/data-quality/`](projects/data-quality/) — professional Python data-quality case.
 - [`projects/payment-reconciliation/`](projects/payment-reconciliation/) — professional payment reconciliation case.
+- [`projects/crm-process-improvement/`](projects/crm-process-improvement/) — reconstructed As-Is and proposed To-Be order-to-cash swimlanes, with readable walkthroughs and editable source files. This is a design proposal, not a completed CRM implementation.
 - [`projects/project-delivery/`](projects/project-delivery/) — synthetic project delivery dashboard.
 - [`projects/operations-reporting/`](projects/operations-reporting/) — synthetic monthly operations reporting.
 - [`projects/academic-statistics/`](projects/academic-statistics/) — MSc Bayesian inference and classification coursework.
 
 The existing `inventory.html`, `dashboards.html` and `academic.html` addresses remain available. Work case studies describe the supplied CV experience; employer data and code are not included. The homepage and folder overviews do not require JavaScript.
+
+## CRM process-design proposal
+
+The CRM project presents the supplied English As-Is and To-Be swimlane diagrams. The As-Is is reconstructed from reported operating issues and is not a verified legacy SOP. The To-Be is proposed v0.2; development, rollout and measured benefits are not represented as completed. Standard customers require confirmed payment. Approved credit terms are for sub-distributors (SD) only, and Accounts Receivable remains monitored after the business step closes.
+
+The project includes the original PNGs, editable three-slide PowerPoint and three-page draw.io file, including the supporting stock-transfer design. Text walkthroughs explain the process without relying on diagram text at mobile sizes. The comparison table and validation questions are portfolio commentary; exception return paths, stock handovers, approval permissions and pilot measures still need agreement before implementation. No transaction dataset is included.

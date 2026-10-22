@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-10-22T12:50:00.000Z" agent="ChatGPT-generated editable process map" version="24.7.17" type="device">
+  <diagram name="AsIs Swimlane EN" id="CRM_AsIs_Swimlane_EN">
+    <mxGraphModel dx="1700" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1490" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CRM_AsIs_Swimlane_EN_bg" value="" style="rounded=0;fillColor=#F7F9FC;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="2600" height="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_title" value="Order, Stock &amp;amp; Payment Controls - Current-State Gaps" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=44;fontStyle=1;fontColor=#14273E;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="95" width="2400" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_lane0" value="" style="rounded=1;arcSize=5;fillColor=#EDF3F8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="230" width="2460" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_role0" value="Sales" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="230" width="213" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_lane1" value="" style="rounded=1;arcSize=5;fillColor=#F2F6FA;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="443" width="2460" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_role1" value="Warehouse / Dispatch" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="443" width="213" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_lane2" value="" style="rounded=1;arcSize=5;fillColor=#EDF3F8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="656" width="2460" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_role2" value="Cash Collection" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="656" width="213" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_lane3" value="" style="rounded=1;arcSize=5;fillColor=#F2F6FA;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="869" width="2460" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_role3" value="Finance" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="869" width="213" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_lane4" value="" style="rounded=1;arcSize=5;fillColor=#EDF3F8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1082" width="2460" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_role4" value="Sales Operations" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1082" width="213" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a1" target="CRM_AsIs_Swimlane_EN_a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a2" target="CRM_AsIs_Swimlane_EN_a3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge2" value="stock" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a2" target="CRM_AsIs_Swimlane_EN_a4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="336" />
+              <mxPoint x="1080" y="549" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a4" target="CRM_AsIs_Swimlane_EN_a5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge4" value="cash (if used)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a3" target="CRM_AsIs_Swimlane_EN_a6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1495" y="336" />
+              <mxPoint x="1495" y="762" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a6" target="CRM_AsIs_Swimlane_EN_a7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1887" y="762" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge6" value="bank transfer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a3" target="CRM_AsIs_Swimlane_EN_a7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1530" y="336" />
+              <mxPoint x="1530" y="975" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a5" target="CRM_AsIs_Swimlane_EN_a8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1940" y="549" />
+              <mxPoint x="1940" y="1188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_edge8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_AsIs_Swimlane_EN_a7" target="CRM_AsIs_Swimlane_EN_a8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2197" y="975" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_a1" value="&amp;lt;b&amp;gt;01  Customer visit&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Order and customer details captured&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="330" y="253" width="295" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_a2" value="&amp;lt;b&amp;gt;02  Order entry&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;CRM and supporting records may differ&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FCEEEF;strokeColor=#DF9EA2;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="710" y="253" width="325" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_a3" value="&amp;lt;b&amp;gt;03  Payment evidence&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Receipt or transfer proof shared&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="253" width="310" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_a4" value="&amp;lt;b&amp;gt;04  Stock dispatch&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Movement recorded separately&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FCEEEF;strokeColor=#DF9EA2;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="466" width="310" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_a5" value="&amp;lt;b&amp;gt;05  Delivery follow-up&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Receipt / stock owner not always reconciled promptly&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FCEEEF;strokeColor=#DF9EA2;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="466" width="340" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_a6" value="&amp;lt;b&amp;gt;06  Cash handover&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Cash record may need separate confirmation&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FCEEEF;strokeColor=#DF9EA2;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="679" width="330" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_a7" value="&amp;lt;b&amp;gt;07  Banking check&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Bank entries and collection logs compared&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="892" width="330" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_a8" value="&amp;lt;b&amp;gt;08  Reconcile &amp;amp;amp; investigate&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Manual order / payment / stock checks; report variances&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FCEEEF;strokeColor=#DF9EA2;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2150" y="1105" width="375" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_foot" value="COMMON GAPS     Inconsistent records  /  delayed receiving confirmation  /  manual payment matching  /  weak adjustment traceability" style="rounded=1;arcSize=5;whiteSpace=wrap;fillColor=#EDF5FC;strokeColor=#C5DCEF;fontColor=#246AA3;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1317" width="2460" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_AsIs_Swimlane_EN_disclaimer" value="Interpretation: this As-Is map is reconstructed from reported exceptions and control gaps; specific legacy steps need stakeholder validation." style="text;html=1;whiteSpace=wrap;align=left;fontSize=18;fontColor=#586D84;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1407" width="2460" height="53" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="ToBe OrderToCash Swimlane EN" id="CRM_ToBe_OrderToCash_Swimlane_EN">
+    <mxGraphModel dx="1700" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1490" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_bg" value="" style="rounded=0;fillColor=#F7F9FC;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="2600" height="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_title" value="CRM Order-to-Cash - Cross-functional Swimlane" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=44;fontStyle=1;fontColor=#14273E;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="95" width="2400" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_lane0" value="" style="rounded=1;arcSize=5;fillColor=#EDF3F8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="230" width="2460" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_role0" value="Sales" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="230" width="213" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_lane1" value="" style="rounded=1;arcSize=5;fillColor=#F2F6FA;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="415" width="2460" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_role1" value="CRM / System" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="415" width="213" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_lane2" value="" style="rounded=1;arcSize=5;fillColor=#EDF3F8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="600" width="2460" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_role2" value="Sales Operations" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="600" width="213" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_lane3" value="" style="rounded=1;arcSize=5;fillColor=#F2F6FA;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="785" width="2460" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_role3" value="Cash Receiver" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="785" width="213" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_lane4" value="" style="rounded=1;arcSize=5;fillColor=#EDF3F8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="970" width="2460" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_role4" value="Finance" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="970" width="213" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_lane5" value="" style="rounded=1;arcSize=5;fillColor=#F2F6FA;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1155" width="2460" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_role5" value="Authorised Approver" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1155" width="213" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b1" target="CRM_ToBe_OrderToCash_Swimlane_EN_b2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="637" y="322" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b2" target="CRM_ToBe_OrderToCash_Swimlane_EN_b3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="972" y="507" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b3" target="CRM_ToBe_OrderToCash_Swimlane_EN_b4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1317" y="692" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge3" value="standard" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#167D71;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b4" target="CRM_ToBe_OrderToCash_Swimlane_EN_b5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1517" y="507" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge4" value="SD only" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#B97723;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b4" target="CRM_ToBe_OrderToCash_Swimlane_EN_b5sd">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1517" y="507" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge5" value="cash / split" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#167D71;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b5" target="CRM_ToBe_OrderToCash_Swimlane_EN_b6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1737" y="322" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge6" value="bank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#167D71;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b5" target="CRM_ToBe_OrderToCash_Swimlane_EN_b7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1780" y="322" />
+              <mxPoint x="1780" y="1062" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#167D71;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b6" target="CRM_ToBe_OrderToCash_Swimlane_EN_b7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2047" y="877" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge8" value="approved A/R" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#B97723;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b5sd" target="CRM_ToBe_OrderToCash_Swimlane_EN_b7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1840" y="1247" />
+              <mxPoint x="1840" y="1062" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#167D71;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b7" target="CRM_ToBe_OrderToCash_Swimlane_EN_b9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2342" y="1062" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge10" value="mismatch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#C14950;strokeWidth=3;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b3" target="CRM_ToBe_OrderToCash_Swimlane_EN_b8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_edge11" value="approval" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#C14950;strokeWidth=3;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="CRM_ToBe_OrderToCash_Swimlane_EN_b8" target="CRM_ToBe_OrderToCash_Swimlane_EN_b8a">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2287" y="692" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b1" value="&amp;lt;b&amp;gt;01  Visit &amp;amp;amp; sales order&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Store, SKU, price, quantity, gifts&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="325" y="239" width="295" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b2" value="&amp;lt;b&amp;gt;02  Validate fields&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Check required details and sales / region stock&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF5FC;strokeColor=#A8CBE8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="640" y="424" width="315" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b3" value="&amp;lt;b&amp;gt;03  Verify order&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Review amount, stock logic and supporting evidence&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="609" width="295" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b4" value="&amp;lt;b&amp;gt;04  Customer type?&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Standard  /  Sub-distributor&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="424" width="220" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b5" value="&amp;lt;b&amp;gt;05A  Standard payment&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Bank / cash / split; attach evidence&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E6F5F0;strokeColor=#98D4C6;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="239" width="270" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b6" value="&amp;lt;b&amp;gt;06  Cash receipt&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Receiver confirms actual cash handover, if applicable&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E6F5F0;strokeColor=#98D4C6;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="794" width="270" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b7" value="&amp;lt;b&amp;gt;07  Finance check&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Confirm posted funds or establish approved SD receivable&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E6F5F0;strokeColor=#98D4C6;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2060" y="979" width="265" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b9" value="&amp;lt;b&amp;gt;09  Close gate&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Close only after all controls pass&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF5FC;strokeColor=#A8CBE8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2340" y="424" width="205" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b5sd" value="&amp;lt;b&amp;gt;05B  SD credit approval&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Valid credit terms and due date; only SD eligible&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF3E2;strokeColor=#DDB681;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="1164" width="320" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b8" value="&amp;lt;b&amp;gt;08  Flag exceptions&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Keep discrepancies open until reviewed&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FCEEEF;strokeColor=#E2A6A6;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="609" width="280" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_b8a" value="&amp;lt;b&amp;gt;Review / approve&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Authorised resolution with reason and history&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF3E2;strokeColor=#DDB681;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2305" y="1164" width="235" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_foot" value="CLOSE GATE     Complete fields  +  accurate stock  +  confirmed payment or valid SD terms  +  approved exceptions" style="rounded=1;arcSize=5;whiteSpace=wrap;fillColor=#EDF5FC;strokeColor=#C5DCEF;fontColor=#246AA3;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1362" width="2460" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_OrderToCash_Swimlane_EN_disclaimer" value="Standard customers: payment confirmation required. Sub-distributors: business step may close under approved terms; A/R remains monitored." style="text;html=1;whiteSpace=wrap;align=left;fontSize=18;fontColor=#586D84;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1407" width="2460" height="53" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="ToBe StockControl Swimlane EN" id="CRM_ToBe_StockControl_Swimlane_EN">
+    <mxGraphModel dx="1700" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1490" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_bg" value="" style="rounded=0;fillColor=#F7F9FC;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="2600" height="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_title" value="Dispatch, Stock Transfer &amp;amp; Exception Resolution" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=44;fontStyle=1;fontColor=#14273E;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="95" width="2400" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_lane0" value="" style="rounded=1;arcSize=5;fillColor=#EDF3F8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="244" width="2460" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_role0" value="Warehouse / Dispatcher" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="244" width="213" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_lane1" value="" style="rounded=1;arcSize=5;fillColor=#F2F6FA;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="504" width="2460" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_role1" value="Sales / Area Manager" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="504" width="213" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_lane2" value="" style="rounded=1;arcSize=5;fillColor=#EDF3F8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="764" width="2460" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_role2" value="CRM / System" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="764" width="213" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_lane3" value="" style="rounded=1;arcSize=5;fillColor=#F2F6FA;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1024" width="2460" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_role3" value="Sales Ops / Approver" style="rounded=1;arcSize=6;fillColor=#E0EAF3;strokeColor=none;fontSize=25;fontStyle=1;fontColor=#14273E;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1024" width="213" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_edge0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_StockControl_Swimlane_EN_c1" target="CRM_ToBe_StockControl_Swimlane_EN_c2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_edge1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#246AA3;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_StockControl_Swimlane_EN_c2" target="CRM_ToBe_StockControl_Swimlane_EN_c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1184" y="374" />
+              <mxPoint x="1184" y="634" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_edge2" value="received = sent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#167D71;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_StockControl_Swimlane_EN_c3" target="CRM_ToBe_StockControl_Swimlane_EN_c4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1678" y="634" />
+              <mxPoint x="1678" y="894" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_edge3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#167D71;strokeWidth=3;" edge="1" parent="1" source="CRM_ToBe_StockControl_Swimlane_EN_c4" target="CRM_ToBe_StockControl_Swimlane_EN_c5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_edge4" value="variance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#C14950;strokeWidth=3;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="CRM_ToBe_StockControl_Swimlane_EN_c3" target="CRM_ToBe_StockControl_Swimlane_EN_c6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1669" y="634" />
+              <mxPoint x="1669" y="1154" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_edge5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#C14950;strokeWidth=3;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="CRM_ToBe_StockControl_Swimlane_EN_c6" target="CRM_ToBe_StockControl_Swimlane_EN_c7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_c1" value="&amp;lt;b&amp;gt;01  Create dispatch&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Source stock, recipient, SKU, flavour and quantity&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="330" y="291" width="325" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_c2" value="&amp;lt;b&amp;gt;02  Release / in transit&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Record date, documents and status&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="800" y="291" width="325" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_c3" value="&amp;lt;b&amp;gt;03  Check receipt&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Receiver confirms physical SKU and quantity&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B9C9D8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="551" width="340" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_c4" value="&amp;lt;b&amp;gt;04  Transfer stock&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Update warehouse -&amp;amp;gt; region / salesperson stock&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF5FC;strokeColor=#A8CBE8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1765" y="811" width="350" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_c5" value="&amp;lt;b&amp;gt;05  Customer sale&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Deduct sales stock on order; never count dispatch as a sale&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF5FC;strokeColor=#A8CBE8;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="811" width="350" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_c6" value="&amp;lt;b&amp;gt;Mismatch / adjustment&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Open an issue with reason and evidence&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FCEEEF;strokeColor=#E2A6A6;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1740" y="1071" width="330" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_c7" value="&amp;lt;b&amp;gt;Review and approve&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font color=&amp;quot;#586D84&amp;quot; style=&amp;quot;font-size:15px&amp;quot;&amp;gt;Resolve, retain audit trail, then release&amp;lt;/font&amp;gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF3E2;strokeColor=#DDB681;strokeWidth=2;fontSize=18;fontColor=#14273E;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2155" y="1071" width="390" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_foot" value="PERIODIC COUNT     Opening stock + received + transfers in - sales - approved gifts - transfers out + approved returns / adjustments" style="rounded=1;arcSize=5;whiteSpace=wrap;fillColor=#EDF5FC;strokeColor=#C5DCEF;fontColor=#246AA3;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1306" width="2460" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="CRM_ToBe_StockControl_Swimlane_EN_disclaimer" value="Where differences remain, stock should not be treated as unrestricted available stock. Frequency / negative-stock rules still require management approval." style="text;html=1;whiteSpace=wrap;align=left;fontSize=18;fontColor=#586D84;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1407" width="2460" height="53" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,87 @@
+/* Readable process-design case study, with the original diagrams intact. */
+.crm-page .project-header h1 { max-width:28ch; }
+.crm-topics { list-style:none; display:flex; flex-wrap:wrap; gap:8px 24px; margin:20px 0 0; padding:0; font-size:13px; color:var(--teal); }
+.proposal-note { margin-top:26px; padding:18px 20px; border-left:3px solid var(--teal); background:var(--sage); }
+.proposal-note > strong { display:block; font-size:13px; }
+.proposal-note p { font-size:14px; color:var(--muted); margin-top:6px; max-width:100ch; }
+.crm-page .case-nav { gap:8px 28px; padding-block:12px; border-bottom:1px solid var(--line); font-size:13px; color:var(--blue); }
+.crm-page main > section { padding-block:40px; }
+.crm-page h2 { font-size:25px; }
+.crm-page h3 { font-size:18px; }
+.case-overview { display:grid; grid-template-columns:minmax(0,1fr) 240px; gap:64px; }
+.case-overview > div > p { color:var(--muted); font-size:15px; margin-top:16px; max-width:72ch; }
+.case-facts { border-left:1px solid var(--line); padding-left:24px; }
+.case-facts > div + div { margin-top:16px; }
+.case-facts dt { font-size:12px; color:var(--muted); }
+.case-facts dd { font-size:14px; margin-top:4px; }
+.map-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; }
+.map-heading .text-link { flex-shrink:0; font-size:13px; }
+.map-label { font-size:12px; letter-spacing:.04em; font-weight:600; margin-bottom:8px; }
+.as-is-label { color:#A33343; }
+.to-be-label { color:var(--teal); }
+.map-intro, .section-intro { font-size:15px; color:var(--muted); margin-top:16px; max-width:95ch; }
+.swimlane-figure { margin:24px 0 0; }
+.swimlane-figure > a { display:block; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.swimlane-figure > a:hover { border-color:var(--blue); }
+.swimlane-figure img { display:block; width:100%; height:auto; }
+.swimlane-figure figcaption { font-size:13px; color:var(--muted); margin-top:12px; max-width:105ch; }
+.process-text { border-top:1px solid var(--line); margin-top:24px; }
+.process-text summary { color:var(--blue); font-size:14px; padding-block:14px; cursor:pointer; }
+.process-text summary:hover { text-decoration:underline; text-underline-offset:4px; }
+.process-text ol { padding-left:22px; margin:8px 0 18px; max-width:95ch; }
+.process-text li { color:var(--muted); font-size:14px; margin-bottom:12px; padding-left:4px; }
+.process-text li::marker { color:var(--teal); }
+.process-text strong { color:var(--navy); }
+.process-text > p { color:var(--muted); font-size:13px; padding-bottom:12px; max-width:95ch; }
+.close-gate { background:var(--sage); padding:20px 24px; border-left:3px solid var(--teal); margin-top:24px; }
+.close-gate h3 { color:var(--teal); font-size:16px; }
+.close-gate p { font-size:14px; color:var(--muted); margin-top:10px; }
+.close-gate p:first-of-type { color:var(--navy); font-weight:500; }
+.supporting-note { padding:24px; margin-top:32px; border:1px solid var(--line); border-radius:6px; }
+.crm-page .supporting-note h2 { font-size:20px; }
+.supporting-note p { font-size:14px; color:var(--muted); margin-top:12px; max-width:105ch; }
+.supporting-note .text-link { margin-top:12px; }
+.control-table { margin-top:20px; max-width:100%; overflow-x:auto; }
+.control-table table { table-layout:fixed; min-width:660px; }
+.table-help { display:none; }
+.control-table th, .control-table td { white-space:normal; vertical-align:top; padding:16px; line-height:1.7; }
+.control-table thead th:first-child { width:30%; }
+.control-table thead th:last-child { width:23%; }
+.control-table tbody th { background:transparent; font-weight:500; }
+.control-table tbody td { color:var(--muted); }
+.control-table caption { font-size:13px; margin-block:0 12px; }
+.validation-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:24px; }
+.validation-grid ul { color:var(--muted); font-size:14px; padding-left:20px; margin:14px 0 0; }
+.validation-grid li { margin-bottom:10px; }
+.validation-grid li::marker { color:var(--teal); }
+.outcome-note { color:var(--muted); font-size:13px; border-top:1px solid var(--line); padding-top:20px; margin-top:24px; }
+.file-links { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:24px; }
+.file-links > a { display:flex; align-items:center; gap:16px; padding:20px; border:1px solid var(--line); border-radius:6px; }
+.file-links > a:hover { text-decoration:none; background:var(--sage); border-color:var(--blue); }
+.file-format { display:grid; place-items:center; flex-shrink:0; width:64px; height:50px; font-size:12px; color:var(--teal); border:1px solid var(--line); border-radius:4px; }
+.file-links strong { display:block; font-size:14px; color:var(--blue); font-weight:500; }
+.file-links > a > span > span { display:block; color:var(--muted); font-size:12px; margin-top:4px; }
+.file-arrow { margin-left:auto; color:var(--blue); }
+.related-case { color:var(--muted); font-size:14px; margin-top:24px; }
+.related-case a { color:var(--blue); text-decoration:underline; text-underline-offset:4px; }
+.crm-page .files-section { border-bottom:0; }
+@media(max-width:800px) {
+  .case-overview { grid-template-columns:minmax(0,1fr) 200px; gap:32px; }
+  .map-heading { align-items:flex-start; flex-direction:column; gap:8px; }
+  .validation-grid { gap:24px; }
+  .file-links { grid-template-columns:1fr; }
+}
+@media(max-width:700px) {
+  .crm-page main > section { padding-block:30px; }
+  .crm-page h2 { font-size:23px; }
+  .crm-page .case-nav { gap:0 20px; }
+  .case-overview { grid-template-columns:1fr; gap:24px; }
+  .case-facts { display:grid; grid-template-columns:1fr 1fr; gap:20px; border-left:0; border-top:1px solid var(--line); padding:20px 0 0; }
+  .case-facts > div + div { margin-top:0; }
+  .proposal-note, .close-gate { padding:16px; }
+  .control-table th, .control-table td { padding:14px; font-size:13px; }
+  .table-help { display:block; font-size:13px; color:var(--muted); margin-top:16px; }
+  .validation-grid { grid-template-columns:1fr; gap:24px; }
+  .file-links > a { padding:16px; gap:12px; }
+  .file-format { width:54px; }
+}

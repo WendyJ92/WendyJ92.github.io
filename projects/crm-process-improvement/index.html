@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wendi Ji's CRM process-design portfolio: reconstructed As-Is and proposed To-Be order-to-cash swimlanes, control gaps, ownership and editable diagrams.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="../../assets/wj-monogram.svg" type="image/svg+xml">
+  <title>CRM Process Improvement | Wendi Ji</title>
+  <link rel="stylesheet" href="../../assets/style.css?v=20261021-palette">
+  <link rel="stylesheet" href="../../assets/projects.css?v=20261021-palette">
+  <link rel="stylesheet" href="project.css?v=20261022-crm">
+</head>
+<body class="project-page crm-page" id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navigation"><a class="brand" href="../../index.html">Wendi Ji<span>Data analysis &amp; operations</span></a><nav aria-label="Main navigation"><a href="../../index.html#portfolio">Projects</a><a href="../../index.html#work">Experience</a><a href="../../academic.html">Academic</a><a href="https://github.com/WendyJ92">GitHub ↗</a></nav></header>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span aria-hidden="true">/</span><a href="../../index.html#portfolio">Projects</a><span aria-hidden="true">/</span><span aria-current="page">CRM process improvement</span></nav>
+    <header class="project-header">
+      <p class="project-kind">Process design · Proposed v0.2</p>
+      <h1>CRM Order-to-Cash<br>Process Design</h1>
+      <p class="project-lead">Mapping the gaps between sales orders, stock movements and payment records, then proposing who checks what before an order can close.</p>
+      <ul class="crm-topics" aria-label="Project focus"><li>Process mapping</li><li>CRM requirements</li><li>Cross-functional controls</li></ul>
+      <div class="proposal-note"><strong>Project status</strong><p>The As-Is map reconstructs reported operating issues; it is not a verified legacy SOP. The To-Be map is a proposal for discussion, not a completed CRM implementation.</p></div>
+    </header>
+    <nav class="case-nav" aria-label="On this page"><a href="#overview">Overview</a><a href="#as-is">As-Is map</a><a href="#to-be">To-Be map</a><a href="#controls">Control changes</a><a href="#files">Project files</a></nav>
+
+    <section id="overview" class="case-overview" aria-labelledby="overview-title">
+      <div><h2 id="overview-title">The problem behind the maps</h2><p>Order details, stock movements and payment evidence can sit in different records. When those records disagree, Sales Operations has to reconstruct what happened across Sales, Warehouse and Finance.</p><p>These swimlanes make the handovers visible. The proposed process adds named checks, a separate credit-approval route and a clear condition for closing the business step.</p></div>
+      <dl class="case-facts"><div><dt>Scope</dt><dd>Orders, stock and payment controls</dd></div><div><dt>Deliverables</dt><dd>As-Is and To-Be swimlanes</dd></div><div><dt>Formats</dt><dd>PNG · PowerPoint · draw.io</dd></div></dl>
+    </section>
+
+    <section id="as-is" class="map-section" aria-labelledby="as-is-title">
+      <div class="map-heading"><div><p class="map-label as-is-label">AS-IS · RECONSTRUCTED</p><h2 id="as-is-title">Where the records can diverge</h2></div><a class="text-link" href="assets/CRM_AsIs_Swimlane_EN.png" target="_blank" rel="noopener">Open full-size As-Is map <span aria-hidden="true">↗</span></a></div>
+      <p class="map-intro">The current-state map follows the order from a customer visit through dispatch, collection and reconciliation. Highlighted steps show reported gaps that need stakeholder validation.</p>
+      <figure class="swimlane-figure"><a href="assets/CRM_AsIs_Swimlane_EN.png" target="_blank" rel="noopener" aria-label="View the full-size As-Is process diagram in a new tab"><img src="assets/CRM_AsIs_Swimlane_EN.png" width="2080" height="1192" alt="Reconstructed current-state swimlane across Sales, Warehouse and Dispatch, Cash Collection, Finance and Sales Operations. A text walkthrough follows." loading="lazy"></a><figcaption>Reported issues: inconsistent records, delayed receiving confirmation, manual payment matching and weak adjustment traceability.</figcaption></figure>
+      <details class="process-text"><summary>Read the As-Is process in text</summary><ol><li><strong>Sales — Customer visit.</strong> Capture customer and order details.</li><li><strong>Sales — Order entry.</strong> CRM and supporting records may differ.</li><li><strong>Sales — Payment evidence.</strong> Share a receipt or transfer proof for the payment checks.</li><li><strong>Warehouse / Dispatch — Stock dispatch.</strong> Record the stock movement separately.</li><li><strong>Warehouse / Dispatch — Delivery follow-up.</strong> Receipt and stock ownership may not be reconciled promptly.</li><li><strong>Cash Collection — Cash handover, if used.</strong> The cash record may need separate confirmation.</li><li><strong>Finance — Banking check.</strong> Compare bank entries and collection logs; bank-transfer evidence can feed this check directly.</li><li><strong>Sales Operations — Reconcile and investigate.</strong> Compare order, payment and stock records manually and report variances.</li></ol><p>Stock and payment checks run along separate paths. This list explains the numbered steps; it does not imply that every order follows one linear sequence.</p></details>
+    </section>
+
+    <section id="to-be" class="map-section" aria-labelledby="to-be-title">
+      <div class="map-heading"><div><p class="map-label to-be-label">TO-BE · PROPOSED V0.2</p><h2 id="to-be-title">Checks before closure</h2></div><a class="text-link" href="assets/CRM_ToBe_OrderToCash_Swimlane_EN.png" target="_blank" rel="noopener">Open full-size To-Be map <span aria-hidden="true">↗</span></a></div>
+      <p class="map-intro">The proposal separates standard payment from approved sub-distributor credit and assigns checks to the CRM, Sales Operations, the cash receiver and Finance.</p>
+      <figure class="swimlane-figure"><a href="assets/CRM_ToBe_OrderToCash_Swimlane_EN.png" target="_blank" rel="noopener" aria-label="View the full-size proposed To-Be process diagram in a new tab"><img src="assets/CRM_ToBe_OrderToCash_Swimlane_EN.png" width="2080" height="1192" alt="Proposed order-to-cash swimlane with standard payment and sub-distributor credit branches, cash confirmation, Finance checks and exception approval. A text walkthrough follows." loading="lazy"></a><figcaption>SD means sub-distributor. The credit route is SD-only; approval of the business step does not settle or remove the receivable.</figcaption></figure>
+      <div class="close-gate"><h3>Proposed close gate</h3><p>Complete fields + accurate stock + confirmed payment or valid SD terms + approved exceptions.</p><p>Standard customers require payment confirmation. For an approved sub-distributor, the business step may close under agreed credit terms while Accounts Receivable remains monitored.</p></div>
+      <details class="process-text"><summary>Read the To-Be process in text</summary><ol><li><strong>01 · Sales — Visit and sales order.</strong> Capture the store, SKU, price, quantity and gifts.</li><li><strong>02 · CRM / System — Validate fields.</strong> Check required details and sales or regional stock.</li><li><strong>03 · Sales Operations — Verify order.</strong> Review the amount, stock logic and supporting evidence. Flag discrepancies for review.</li><li><strong>04 · CRM / System — Customer type.</strong> Distinguish standard customers from sub-distributors.</li><li><strong>05A · Sales — Standard payment.</strong> Record bank, cash or split payment and attach evidence.</li><li><strong>05B · Authorised Approver — SD credit approval.</strong> For eligible sub-distributors only, approve valid credit terms and a due date.</li><li><strong>06 · Cash Receiver — Cash receipt, if applicable.</strong> Confirm the actual cash handover.</li><li><strong>07 · Finance — Finance check.</strong> Confirm posted funds or establish the approved SD receivable.</li><li><strong>08 · Sales Operations — Flag exceptions.</strong> Keep discrepancies open until reviewed. An authorised approver records the resolution, reason and history.</li><li><strong>09 · CRM / System — Close gate.</strong> Close only after the relevant controls pass.</li></ol><p>Steps 05A and 05B are alternative routes. Cash confirmation applies when cash is used. The exception route still needs a defined return to verification before implementation.</p></details>
+    </section>
+
+    <aside class="supporting-note" aria-labelledby="stock-control-title"><h2 id="stock-control-title">Supporting design: stock transfers</h2><p>The third diagram in the editable files separates a warehouse dispatch from a customer sale. The receiver checks the physical SKU and quantity before stock transfers to a region or salesperson; a later customer sale deducts that stock separately. Differences go through review with a reason and evidence.</p><p>Stock with unresolved differences should not be treated as unrestricted available stock. Count frequency and negative-stock rules still need management approval.</p><a class="text-link" href="#files">Download the supporting map with the editable files <span aria-hidden="true">↓</span></a></aside>
+
+    <section id="controls" class="control-section" aria-labelledby="controls-title">
+      <h2 id="controls-title">From reported gaps to proposed controls</h2>
+      <p class="section-intro">The intended change is to make checks and responsibility explicit before discrepancies are passed downstream.</p>
+      <p class="table-help">Scroll the table sideways to see each control and its owner.</p>
+      <div class="control-table" role="region" aria-label="Proposed control comparison" tabindex="0"><table><caption>Summary of the two maps. These controls are proposed, not confirmed as implemented.</caption><thead><tr><th scope="col">Reported gap</th><th scope="col">Proposed control</th><th scope="col">Responsible role</th></tr></thead><tbody>
+        <tr><th scope="row">CRM and supporting records differ</th><td>Validate required fields, then review the order amount and supporting evidence.</td><td>CRM / System<br>Sales Operations</td></tr>
+        <tr><th scope="row">Stock movements need separate reconciliation</th><td>Check stock logic during order verification and require accurate stock at closure.</td><td>Sales Operations<br>CRM / System</td></tr>
+        <tr><th scope="row">Cash handover needs confirmation</th><td>Record receipt by the cash receiver, with a separate Finance check of posted funds.</td><td>Cash Receiver<br>Finance</td></tr>
+        <tr><th scope="row">Payment matching relies on manual investigation</th><td>Distinguish confirmed standard payment from an approved SD receivable with a due date.</td><td>Sales<br>Authorised Approver<br>Finance</td></tr>
+        <tr><th scope="row">Adjustments have weak traceability</th><td>Keep discrepancies open for review and record the authorised resolution, reason and history.</td><td>Sales Operations<br>Authorised Approver</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="validation" class="validation-section" aria-labelledby="validation-title">
+      <h2 id="validation-title">Before implementation</h2>
+      <p class="section-intro">The maps provide a starting point for requirements discussions. The following work remains to be agreed and tested.</p>
+      <div class="validation-grid"><div><h3>Confirm the workflow</h3><ul><li>Validate the reconstructed As-Is with the people doing each step.</li><li>Validate how the supporting dispatch and stock-transfer workflow connects to order checks and closure.</li><li>Define approval permissions and how rejected or approved exceptions return to verification.</li></ul></div><div><h3>Test the controls</h3><ul><li>Agree acceptance cases for bank, cash, split-payment and SD-credit orders.</li><li>Check that missing evidence, invalid terms or unresolved exceptions prevent closure.</li><li>Set a baseline for unmatched payments, unresolved exceptions and reconciliation time before a pilot.</li></ul></div></div>
+      <p class="outcome-note">The deliverable shown here is the process design. No completed rollout, automated CRM integration or measured improvement is claimed.</p>
+    </section>
+
+    <section id="files" class="files-section" aria-labelledby="files-title">
+      <h2 id="files-title">Project files</h2>
+      <p class="section-intro">Each editable file contains three diagrams: the two maps shown above and a supporting stock-transfer and exception-control map. The PNGs are the supplied visual references; editable layouts may differ.</p>
+      <div class="file-links"><a href="files/CRM_Swimlane_Diagrams_Editable.pptx" download><span class="file-format">PPTX</span><span><strong>Editable PowerPoint</strong><span>3 slides · 40 KB</span></span><span class="file-arrow" aria-hidden="true">↓</span></a><a href="files/CRM_Swimlane_Diagrams_Editable.drawio" download><span class="file-format">DRAW.IO</span><span><strong>Editable diagram file</strong><span>3 pages · 42 KB</span></span><span class="file-arrow" aria-hidden="true">↓</span></a></div>
+      <p class="related-case">Related work case: <a href="../payment-reconciliation/">Payment Reconciliation Analysis <span aria-hidden="true">↗</span></a></p>
+    </section>
+    <div class="project-return"><a href="../../index.html#crm-process">← All project folders</a><a href="https://github.com/WendyJ92/WendyJ92.github.io/tree/main/projects/crm-process-improvement">View folder on GitHub ↗</a></div>
+  </main>
+  <footer><p>Wendi Ji</p><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
