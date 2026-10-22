@@ -19,3 +19,5 @@ The supplied diagrams and editable files are preserved. Both editable files also
 SD means sub-distributor. Standard customers require payment confirmation. An approved SD business step may close under valid credit terms, while the receivable remains monitored. The exception return path, detailed stock handovers, permissions and pilot measures still require agreement. The diagrams are process-design material, not a production specification or deployed integration.
 
 [Related payment-reconciliation work case](../payment-reconciliation/)
+
+On smaller screens, the control comparison reflows into one entry per gap, with the proposed control and responsible role shown together. Its content and table semantics are preserved. Related projects link to the professional payment-reconciliation case and the separate synthetic inventory demonstration.

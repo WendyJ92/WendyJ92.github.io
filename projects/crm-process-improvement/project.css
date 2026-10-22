@@ -43,7 +43,7 @@
 .supporting-note .text-link { margin-top:12px; }
 .control-table { margin-top:20px; max-width:100%; overflow-x:auto; }
 .control-table table { table-layout:fixed; min-width:660px; }
-.table-help { display:none; }
+.control-label { display:none; }
 .control-table th, .control-table td { white-space:normal; vertical-align:top; padding:16px; line-height:1.7; }
 .control-table thead th:first-child { width:30%; }
 .control-table thead th:last-child { width:23%; }
@@ -62,8 +62,12 @@
 .file-links strong { display:block; font-size:14px; color:var(--blue); font-weight:500; }
 .file-links > a > span > span { display:block; color:var(--muted); font-size:12px; margin-top:4px; }
 .file-arrow { margin-left:auto; color:var(--blue); }
-.related-case { color:var(--muted); font-size:14px; margin-top:24px; }
-.related-case a { color:var(--blue); text-decoration:underline; text-underline-offset:4px; }
+.related-projects { border-top:1px solid var(--line); margin-top:32px; padding-top:24px; }
+.related-projects ul { display:grid; grid-template-columns:1fr 1fr; gap:16px; list-style:none; margin:18px 0 0; padding:0; }
+.related-projects a { display:flex; align-items:center; justify-content:space-between; gap:16px; height:100%; min-height:96px; padding:18px 20px; border:1px solid var(--line); border-radius:6px; color:var(--blue); }
+.related-projects a:hover { background:var(--sage); border-color:var(--blue); text-decoration:none; }
+.related-projects strong { display:block; font-size:15px; font-weight:500; }
+.related-kind { display:block; font-size:12px; color:var(--muted); margin-bottom:6px; }
 .crm-page .files-section { border-bottom:0; }
 @media(max-width:800px) {
   .case-overview { grid-template-columns:minmax(0,1fr) 200px; gap:32px; }
@@ -79,9 +83,18 @@
   .case-facts { display:grid; grid-template-columns:1fr 1fr; gap:20px; border-left:0; border-top:1px solid var(--line); padding:20px 0 0; }
   .case-facts > div + div { margin-top:0; }
   .proposal-note, .close-gate { padding:16px; }
-  .control-table th, .control-table td { padding:14px; font-size:13px; }
-  .table-help { display:block; font-size:13px; color:var(--muted); margin-top:16px; }
+  .control-table { overflow:visible; }
+  .control-table table { display:block; width:100%; min-width:0; }
+  .control-table caption { display:block; text-align:left; width:100%; }
+  .control-table thead { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+  .control-table tbody { display:grid; gap:16px; }
+  .control-table tbody tr { display:block; padding:20px; border:1px solid var(--line); border-radius:6px; }
+  .control-table tbody th, .control-table tbody td { display:block; width:100%; padding:0; border:0; font-size:14px; }
+  .control-table tbody th { font-size:16px; font-weight:600; line-height:1.5; }
+  .control-table tbody td { margin-top:16px; }
+  .control-label { display:block; font-size:12px; font-weight:500; color:var(--teal); margin-bottom:4px; }
   .validation-grid { grid-template-columns:1fr; gap:24px; }
+  .related-projects ul { grid-template-columns:1fr; }
   .file-links > a { padding:16px; gap:12px; }
   .file-format { width:54px; }
 }
