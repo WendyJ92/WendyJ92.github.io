@@ -4,7 +4,7 @@ Wendi Ji's professional portfolio, published at [wendyj92.github.io](https://wen
 
 ## Pages
 
-- **[Overview](https://wendyj92.github.io/)** — a compact profile, technical skills, project folders, a career timeline and education.
+- **[Overview](https://wendyj92.github.io/)** — a personalised profile, project-folder cards, technical skills, a career timeline and education.
 - **[Interactive dashboards](https://wendyj92.github.io/dashboards.html)** — project delivery risks and operations reporting, with filters and CSV downloads.
 - **[PSI performance dashboard](https://wendyj92.github.io/inventory.html)** — a dedicated purchase, sales and inventory demonstration, extended from the structure of an Excel reporting workbook. Includes sales and stock trends, product mix, a 30-day demand baseline, replenishment priorities, stock movements, incoming orders, receivables and scoped CSV exports.
 - **[Academic projects](https://wendyj92.github.io/academic.html)** — University of Exeter MSc coursework, methods, reported results, reflections and education.
@@ -23,7 +23,7 @@ The MSc project summarises MTHM017: Advanced Topics in Statistics. Figures come 
 
 A light professional palette uses Deep Navy (`#14263D`) for headings, Professional Blue (`#2563EB`) for links and primary buttons, and Muted Teal (`#0F766E`) for analysis highlights and charts. The main background is White (`#FFFFFF`); content panels use Light Grey (`#F1F5F9`). Warning states retain distinct, readable colours.
 
-The homepage keeps its project-folder structure. All pages share the same palette and system sans-serif font stack, with no external font download. Page-specific CSS handles layout, while shared colour tokens live in `assets/style.css`. The PSI project preview is a screenshot of the working light-theme dashboard.
+The homepage uses a navy profile banner, a WJ monogram and a small Newcastle-inspired bridge illustration. Two-column project cards have individual outline icons and link to their existing project folders; academic work remains separate. The layout becomes a single column on narrow screens. Contact currently links to the verified GitHub profile. All pages share the same palette and system sans-serif font stack, with no external font download. Page-specific CSS handles layout, while shared colour tokens live in `assets/style.css`. The PSI project preview is a screenshot of the working light-theme dashboard.
 
 ## Preview and publishing
 
